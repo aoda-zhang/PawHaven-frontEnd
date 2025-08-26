@@ -1,8 +1,8 @@
 const designTokens = {
   colors: {
-    primary: '#F4A261',
-    primaryLight: '#F9D6B5', // softer light orange
-    primaryDark: '#f7752a', // deeper warm orange
+    primary: '#f7823a',
+    primaryLight: '#f89c61', // softer light orange
+    primaryDark: '#e06716', // deeper warm orange
 
     secondary: '#4CAF50',
     secondaryLight: '#81C784',

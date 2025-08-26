@@ -16,13 +16,13 @@ const Hero = () => {
             type="button"
             className="roundedButton text-xl bg-primary text-white hover:bg-primary-dark"
           >
-            Spot a Friend
+            {t('home.rescue')}
           </button>
           <button
             type="button"
             className="roundedButton text-xl bg-white text-primary  hover:bg-gray-100 "
           >
-            Help a Friend
+            {t('home.support')}
           </button>
         </div>
       </div>

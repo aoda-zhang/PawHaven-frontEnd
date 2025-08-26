@@ -1,10 +1,9 @@
 @reference "../../../../../packages/theme/global.css";
 
 .authBox {
-  @apply flex flex-col w-dvw h-dvh box-border p-10 bg-background;
+  @apply flex flex-col w-dvw h-dvh box-border p-4 lg:p-10 bg-background;
   .contentBox {
-    @apply flex flex-row max-w-[50vw] m-auto rounded-lg shadow-md transition-all duration-300 ease-in-out bg-white;
-    border-radius: 6%;
+    @apply flex flex-row lg:max-w-[50vw] m-auto transition-all duration-300 ease-in-out bg-white;
     .slogan {
       @apply text-center bg-primary hidden lg:block space-y-10;
       border-radius: 6%;
@@ -19,7 +18,7 @@
       }
     }
     .loginForm {
-      @apply flex flex-1 flex-col justify-center box-border p-10 lg:p-16;
+      @apply flex flex-1 flex-col justify-center box-border lg:p-16;
       .welcomeText {
         @apply text-2xl mb-5 text-center;
       }

@@ -39,6 +39,7 @@ const Login: FC = () => {
             className={style.baseForm}
             label={t('auth.userName')}
             name="userName"
+            required
           />
           <FormInput
             type="password"
@@ -47,6 +48,7 @@ const Login: FC = () => {
             size="small"
             label={t('auth.password')}
             name="password"
+            required
           />
           <Button
             disabled={isLoading}

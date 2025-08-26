@@ -2,9 +2,9 @@
 
 @theme {
   /* === Core Colors (Warm & Friendly) === */
-  --color-primary: #f4a261; /* warm orange */
-  --color-primary-light: #f9d6b5; /* softer light orange */
-  --color-primary-dark: #f7752a; /* deeper warm orange */
+  --color-primary: #f7823a; /* warm orange (slightly lighter) */
+  --color-primary-light: #f89c61; /* lighter soft orange */
+  --color-primary-dark: #e06716; /* slightly lighter deep orange */
 
   --color-secondary: #4caf50; /* nature green */
   --color-secondary-light: #81c784; /* soft green */

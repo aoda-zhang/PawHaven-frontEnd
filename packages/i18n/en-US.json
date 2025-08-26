@@ -56,6 +56,8 @@
     "login_now": "Log in now"
   },
   "home": {
-    "home_page": "Home Page"
+    "home_page": "Home Page",
+    "rescue": "Rescue",
+    "support": "Support"
   }
 }

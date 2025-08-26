@@ -56,6 +56,8 @@
     "login_now": "立即登录"
   },
   "home": {
-    "home_page": "主页"
+    "home_page": "主页",
+    "rescue": " 我要救助",
+    "support": "我要帮助"
   }
 }

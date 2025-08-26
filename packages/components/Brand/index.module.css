@@ -5,6 +5,6 @@
     @apply w-10 h-auto;
   }
   .name {
-    @apply text-3xl font-family-friendly text-primary-dark font-semibold;
+    @apply text-3xl font-family-friendly text-primary font-semibold;
   }
 }
