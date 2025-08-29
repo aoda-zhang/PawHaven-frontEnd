@@ -5,12 +5,12 @@ import ErrorFallback from '@/components/ErrorFallback';
 import GuardRoute from '@/components/GuardRoute';
 import NotFund from '@/components/NotFund';
 import AuthLayout from '@/features/Auth/authLayout';
+import Login from '@/features/Auth/Login';
+import Register from '@/features/Auth/Register';
 import Home from '@/features/Home';
-import ReportStray from '@/features/ReportStray';
 import RootLayout from '@/layout';
 
-const Login = lazy(() => import('@/features/Auth/Login'));
-const Register = lazy(() => import('@/features/Auth/Register'));
+const ReportStray = lazy(() => import('@/features/ReportStray'));
 
 // Please use SuspenseWrapper to wrap the lazy loaded components
 
@@ -23,16 +23,8 @@ const routerElementMapping: Record<string, ReactElement> = {
   rootLayout: <RootLayout />,
   home: <Home />,
   authLayout: <AuthLayout />,
-  auth_login: (
-    <SuspenseWrapper>
-      <Login />
-    </SuspenseWrapper>
-  ),
-  auth_register: (
-    <SuspenseWrapper>
-      <Register />
-    </SuspenseWrapper>
-  ),
+  auth_login: <Login />,
+  auth_register: <Register />,
   report_stray: (
     <SuspenseWrapper>
       <ReportStray />
