@@ -45,7 +45,7 @@ const FormInput: React.FC<
             {...field}
             {...props}
             fullWidth={fullWidth}
-            variant={props?.variant ?? 'standard'}
+            variant={props?.variant ?? 'outlined'}
             required={props?.required}
             error={!!error}
             type={type}

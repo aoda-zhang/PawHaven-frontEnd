@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { FC, memo } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import formBasestyle from '../formBase.module.css';
+import formBaseStyle from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
 
 import style from './index.module.css';
@@ -29,11 +29,11 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
 
   return (
     <div
-      className={classNames(formBasestyle.baseFormContainer, {
-        [formBasestyle.error]: !!errors[name],
+      className={classNames(formBaseStyle.baseFormContainer, {
+        [formBaseStyle.error]: !!errors[name],
       })}
     >
-      <p className={formBasestyle.label}>{label}</p>
+      <p className={formBaseStyle.label}>{label}</p>
       {options.map((option) => (
         <label
           key={option.value}
@@ -56,7 +56,7 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
         </label>
       ))}
       {errors[name] && (
-        <span className={formBasestyle.errorMessage}>
+        <span className={formBaseStyle.errorMessage}>
           {errors[name]?.message?.toString()}
         </span>
       )}

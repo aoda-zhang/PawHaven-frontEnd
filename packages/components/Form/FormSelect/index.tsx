@@ -49,7 +49,7 @@ const FormSelect: React.FC<BaseFormType & BaseSelectType & SelectProps> = ({
           <Select
             {...field}
             {...props}
-            variant={props?.variant ?? 'standard'}
+            variant={props?.variant ?? 'outlined'}
             required={props?.required}
           >
             {options?.map((item) => (

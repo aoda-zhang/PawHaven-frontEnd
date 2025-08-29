@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@mui/material';
 import '@shared/theme/global.css';
 import Loading from '@shared/components/Loading';
-import ErrorPage from '@shared/components/SystemError';
 import getReactQueryOptions from '@shared/cores/react-query';
 import MUITheme from '@shared/theme/MUI-theme';
 import { type ReactNode, Suspense, useState } from 'react';
@@ -17,6 +16,8 @@ import '@shared/i18n';
 import { store, persistor } from '../store/reduxStore';
 
 import GlobalInitializer from './GlobalInitializer';
+
+import ErrorPage from '@/components/SystemError';
 
 type AppProviderProps = {
   children: ReactNode;

@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import {
   useFetchGlobalMenu,
   useFetchGlobalRouters,
-} from '@/features/Home/apis/queries';
+} from './GlobalInitializationAPI';
+
 import { useReduxDispatch } from '@/hooks/reduxHooks';
 import { setGlobalMenuItems, setGlobalRouters } from '@/store/globalReducer';
 

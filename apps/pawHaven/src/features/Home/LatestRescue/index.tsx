@@ -51,7 +51,7 @@ const rescues: RescueItemType[] = [
 const RescueItem = (item: RescueItemType) => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-1 p-4 mb-4 border-1 border-border rounded-md cursor-pointer">
+    <div className="flex flex-col gap-1 p-4 mb-4 border-1 border-border rounded-md cursor-pointer bg-white">
       <img
         src={item?.img}
         alt={item?.name}
@@ -77,7 +77,7 @@ const RescueItem = (item: RescueItemType) => {
 const LatestRescue = () => {
   const { t } = useTranslation();
   return (
-    <div className="px-10 lg:px-20">
+    <div className="px-4 lg:px-20">
       <div className="flex items-center justify-between my-4">
         <span className="text-base lg:text-2xl font-bold">
           {t('pawHaven.recent_rescue')}

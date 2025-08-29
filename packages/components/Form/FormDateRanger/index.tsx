@@ -58,7 +58,7 @@ const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
                 onChange={field.onChange}
                 slotProps={{
                   textField: {
-                    variant: props?.variant ?? 'standard',
+                    variant: props?.variant ?? 'outlined',
                     required: props?.required,
                     fullWidth,
                   },

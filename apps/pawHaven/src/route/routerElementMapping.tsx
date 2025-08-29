@@ -6,10 +6,13 @@ import GuardRoute from '@/components/GuardRoute';
 import NotFund from '@/components/NotFund';
 import AuthLayout from '@/features/Auth/authLayout';
 import Home from '@/features/Home';
+import ReportStray from '@/features/ReportStray';
 import RootLayout from '@/layout';
 
 const Login = lazy(() => import('@/features/Auth/Login'));
 const Register = lazy(() => import('@/features/Auth/Register'));
+
+// Please use SuspenseWrapper to wrap the lazy loaded components
 
 const routerElementMapping: Record<string, ReactElement> = {
   guardRoute: (
@@ -28,6 +31,11 @@ const routerElementMapping: Record<string, ReactElement> = {
   auth_register: (
     <SuspenseWrapper>
       <Register />
+    </SuspenseWrapper>
+  ),
+  report_stray: (
+    <SuspenseWrapper>
+      <ReportStray />
     </SuspenseWrapper>
   ),
   notFund: <NotFund />,

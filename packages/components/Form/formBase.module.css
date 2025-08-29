@@ -4,7 +4,7 @@
 }
 
 .baseFormContainer {
-  @apply w-full lg:max-w-[40vw]  mb-[1.5rem];
+  @apply mb-[1.5rem];
 }
 
 .errorMessage {

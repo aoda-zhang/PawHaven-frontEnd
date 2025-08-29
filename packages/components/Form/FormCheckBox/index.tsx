@@ -41,7 +41,6 @@ const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
         <div
           className={classNames([props?.className, styles.baseFormContainer])}
         >
-          <div className={styles.label}>{label}</div>
           <FormControlLabel
             control={
               <Checkbox

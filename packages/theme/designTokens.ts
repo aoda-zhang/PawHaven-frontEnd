@@ -8,7 +8,7 @@ const designTokens = {
     secondaryLight: '#81C784',
     secondaryDark: '#388E3C',
 
-    background: '#FAF6F1', // warm off-white
+    background: '#eee3d8', // warm off-white
     surface: '#FFFFFF', // pure white for cards
 
     textPrimary: '#2F2F2F',

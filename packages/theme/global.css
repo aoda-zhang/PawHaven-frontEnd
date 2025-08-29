@@ -10,7 +10,7 @@
   --color-secondary-light: #81c784; /* soft green */
   --color-secondary-dark: #388e3c; /* deep green */
 
-  --color-background: #faf6f1; /* warm off-white */
+  --color-background: #eee3d8; /* warm off-white */
   --color-surface: #ffffff; /* pure white for cards */
 
   --color-text: #2f2f2f; /* main text */
@@ -85,7 +85,7 @@
   html {
     font-size: 16px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-family-sans);

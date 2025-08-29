@@ -19,9 +19,7 @@ const routesMapping = (routesFromAPI: any[]): RouteObject[] => {
     const mappedRoute: RouteObject = {
       path: route?.path,
       element: routerElementMapping[route.element],
-      errorElement: route.errorElement
-        ? routerElementMapping[route.errorElement]
-        : undefined,
+      errorElement: routerElementMapping.errorFallback,
       handle: route.handle,
     };
 

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 const RecentStory = () => {
   const { t } = useTranslation();
   return (
-    <div className="px-10 lg:px-20">
+    <div className="px-4 lg:px-20">
       <p className="text-base lg:text-2xl font-bold my-4">
         {t('common.love_story')}
       </p>
