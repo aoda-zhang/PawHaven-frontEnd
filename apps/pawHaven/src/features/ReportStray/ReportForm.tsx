@@ -177,14 +177,14 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
           />
         </FormSection>
 
-        <FormSection title={t('reportStray.images')}>
-          {/* <FileUpload
+        {/* <FormSection title={t('reportStray.images')}>
+          <FileUpload
             accept="image/*"
             maxSizeMB={5}
             multiple
             onFilesChange={handleImageChange}
-          /> */}
-        </FormSection>
+          />
+        </FormSection> */}
 
         <FormSection title={t('reportStray.contact_info')}>
           <FormInput

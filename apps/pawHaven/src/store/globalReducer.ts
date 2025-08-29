@@ -8,7 +8,7 @@ import { useReduxSelector } from '../hooks/reduxHooks';
 import reducerNames from './reducerNames';
 import { ReduxState } from './reduxStore';
 
-import type { UserInfoType } from '@/typings/auth.types';
+import type { UserInfoType } from '@/features/Auth/types';
 
 export interface GlobalStateType {
   userInfo: UserInfoType;

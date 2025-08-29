@@ -1,6 +1,6 @@
 import httpService from '@shared/cores/http';
 
-import { AuthFieldType, LoginInfo } from '@/typings/auth.types';
+import { AuthFieldType, LoginInfo } from '../types';
 
 export const register = (userInfo: AuthFieldType) => {
   return httpService.post('/auth/register', userInfo);
