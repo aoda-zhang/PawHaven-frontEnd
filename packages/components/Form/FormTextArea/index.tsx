@@ -12,6 +12,8 @@ import { useTranslation } from 'react-i18next';
 import styles from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
 
+import textAreaStyle from './index.module.css';
+
 const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
   name,
   label,
@@ -48,11 +50,7 @@ const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
         >
           <div className={styles.label}>{label}</div>
           <TextareaAutosize
-            style={{
-              border: '1px solid #ccc',
-              padding: '8px',
-              borderRadius: '4px',
-            }}
+            className={textAreaStyle.textareaLayout}
             {...fieldProps}
             value={value ?? ''}
             ref={fieldRef}

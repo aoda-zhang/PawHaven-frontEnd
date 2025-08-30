@@ -1,3 +1,4 @@
+import { FormInput } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -33,13 +34,13 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
     }
   }, [value, address, t]);
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAddress(e.target.value);
-    onChange({
-      ...value,
-      address: e.target.value,
-    });
-  };
+  // const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setAddress(e.target.value);
+  //   onChange({
+  //     ...value,
+  //     address: e.target.value,
+  //   });
+  // };
 
   const handleGetCurrentLocation = () => {
     setLoading(true);
@@ -80,11 +81,9 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
         <label className={styles.label} htmlFor="address">
           {t('reportStray.address')}
         </label>
-        <input
-          id="address"
-          type="text"
+        <FormInput
           value={address}
-          onChange={handleAddressChange}
+          // onChange={handleAddressChange}
           className={styles.input}
           placeholder={t('reportStray.enter_address')}
         />
