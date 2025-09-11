@@ -103,13 +103,32 @@ const RescueItem = ({
 
 const LatestRescue = () => {
   const { t } = useTranslation();
+
+  const handleViewAllClick = () => {
+    // TODO: Navigate to the appropriate page for viewing all rescues
+    // navigate('/rescues');
+  };
+
+  const handleViewAllKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleViewAllClick();
+    }
+  };
+
   return (
     <div className="px-4 lg:px-20">
       <div className="flex items-center justify-between my-4">
         <span className="text-base lg:text-2xl font-bold">
           {t('common.recent_rescue')}
         </span>
-        <div className="flex items-center gap-4 cursor-pointer">
+        <div
+          className="flex items-center gap-4"
+          role="button"
+          tabIndex={0}
+          onClick={handleViewAllClick}
+          onKeyDown={handleViewAllKeyDown}
+        >
           <span>{t('common.view_all')}</span>
           <ArrowRight
             size="1.875rem"
@@ -118,8 +137,8 @@ const LatestRescue = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {rescues?.map((item) => (
-          <RescueItem {...item} key={item?.name} />
+        {rescues.map((item) => (
+          <RescueItem {...item} key={item.name} />
         ))}
       </div>
     </div>
