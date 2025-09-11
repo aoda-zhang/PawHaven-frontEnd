@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 import styles from '../index.module.css';
 
 const Hero = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className={styles.slog}>
@@ -15,14 +17,17 @@ const Hero = () => {
           <button
             type="button"
             className="roundedButton text-xl bg-primary text-white hover:bg-primary-dark"
+            onClick={() => {
+              navigate('/report-stray');
+            }}
           >
-            {t('home.rescue')}
+            {t('home.report')}
           </button>
           <button
             type="button"
-            className="roundedButton text-xl bg-white text-primary  hover:bg-gray-100 "
+            className="roundedButton text-xl bg-white text-primary  hover:bg-gray-100"
           >
-            {t('home.support')}
+            {t('home.rescue')}
           </button>
         </div>
       </div>

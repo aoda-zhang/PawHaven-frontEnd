@@ -19,6 +19,7 @@ export interface GlobalStateType {
 const initialState: GlobalStateType = {
   userInfo: {
     userName: '',
+    userID: '',
   },
   globalMenuItems: [],
   globalRouters: [],
@@ -45,5 +46,7 @@ export default globalReducer.reducer;
 export const { setGlobalMenuItems, setUserInfo, setGlobalRouters } =
   globalReducer.actions;
 export const useGlobalState = () => {
-  return useReduxSelector((state: ReduxState) => state?.global ?? {});
+  return useReduxSelector(
+    (state: ReduxState) => state?.global ?? {},
+  ) as GlobalStateType;
 };

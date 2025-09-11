@@ -5,9 +5,8 @@ import {
   type CheckboxProps,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 
 import styles from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
@@ -15,28 +14,16 @@ import type { BaseFormType } from '../formBase.type';
 const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
   name,
   label,
-  rules = {},
   defaultValue = false,
   ...props
 }) => {
-  const { t } = useTranslation();
   const { control } = useFormContext();
-  const formRules = useMemo(() => {
-    if (props?.required && !rules?.required) {
-      return {
-        ...rules,
-        required: `${t(label ?? '')} ${t('common.required')}`,
-      };
-    }
-    return rules;
-  }, [rules, props?.required, label, t]);
 
   return (
     <Controller
       name={name}
       control={control}
       defaultValue={defaultValue}
-      rules={formRules}
       render={({ field, fieldState: { error } }) => (
         <div
           className={classNames([props?.className, styles.baseFormContainer])}

@@ -82,10 +82,10 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
           {t('reportStray.address')}
         </label>
         <FormInput
-          value={address}
+          // value={address}
           // onChange={handleAddressChange}
           className={styles.input}
-          placeholder={t('reportStray.enter_address')}
+          // placeholder={t('reportStray.enter_address')}
         />
       </div>
 

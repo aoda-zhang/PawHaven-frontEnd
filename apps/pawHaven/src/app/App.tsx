@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import AppRouterProvider from '../route/AppRouterProvider';
 
-import AppProvider from './AppProvider';
+import AppProvider from './RootProvider';
 
 const App: FC = () => {
   return (

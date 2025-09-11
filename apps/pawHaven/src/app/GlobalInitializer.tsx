@@ -7,7 +7,11 @@ import {
 } from './GlobalInitializationAPI';
 
 import { useReduxDispatch } from '@/hooks/reduxHooks';
-import { setGlobalMenuItems, setGlobalRouters } from '@/store/globalReducer';
+import {
+  setGlobalMenuItems,
+  setGlobalRouters,
+  useGlobalState,
+} from '@/store/globalReducer';
 
 /**
  *
@@ -22,10 +26,14 @@ import { setGlobalMenuItems, setGlobalRouters } from '@/store/globalReducer';
  */
 const GlobalInitializer = () => {
   const dispatch = useReduxDispatch();
+  const {
+    userInfo: { userID },
+  } = useGlobalState();
 
-  const { data: menu, isLoading: menuLoading } = useFetchGlobalMenu();
+  const { data: menu, isPending: menuLoading } = useFetchGlobalMenu(userID);
 
-  const { data: routers, isLoading: routersLoading } = useFetchGlobalRouters();
+  const { data: routers, isPending: routersLoading } =
+    useFetchGlobalRouters(userID);
 
   useEffect(() => {
     if (menu && menu?.length > 0) {

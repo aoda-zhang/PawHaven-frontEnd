@@ -1,5 +1,5 @@
 export interface AnimalReport {
-  animalType: 'cat' | 'dog' | 'other';
+  animalType: string;
   age: 'baby' | 'young' | 'adult' | 'senior';
   appearance: {
     color: string;

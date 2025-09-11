@@ -7,9 +7,8 @@ import {
 } from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
 import classNames from 'classnames';
 import { Dayjs } from 'dayjs';
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 
 import styles from '../formBase.module.css';
 import { BaseFormType } from '../formBase.type';
@@ -22,30 +21,17 @@ type FormSingleDateRangerProps = BaseFormType &
 const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
   name,
   label,
-  rules = {},
   defaultValue = [null, null],
   fullWidth = true,
   ...props
 }) => {
-  const { t } = useTranslation();
   const { control } = useFormContext();
-
-  const formRules = useMemo(() => {
-    if (props?.required && !rules?.required) {
-      return {
-        ...rules,
-        required: `${t(label ?? '')} ${t('common.required')}`,
-      };
-    }
-    return rules;
-  }, [rules, props?.required, label, t]);
 
   return (
     <Controller
       name={name}
       control={control}
       defaultValue={defaultValue}
-      rules={formRules}
       render={({ field, fieldState: { error } }) => (
         <div
           className={classNames([props?.className, styles.baseFormContainer])}

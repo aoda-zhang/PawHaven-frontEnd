@@ -1,12 +1,13 @@
 import storageKeys from '@shared/constants/storageKeys';
 import storage from '@shared/utils/storage';
-import { useMutation } from 'react-query';
+import { useMutation } from '@tanstack/react-query';
 import { NavigateFunction } from 'react-router-dom';
 
-import * as AuthAPI from './apis';
+import * as AuthAPI from './apis/requests';
 
 export const useUserRegister = (navigate: NavigateFunction) => {
-  return useMutation(AuthAPI.register, {
+  return useMutation({
+    mutationFn: AuthAPI.register,
     onSuccess: async (isRegrester, value) => {
       if (isRegrester) {
         const loginInfo = await AuthAPI.login({
@@ -22,9 +23,10 @@ export const useUserRegister = (navigate: NavigateFunction) => {
 };
 
 export const useUserLogin = (navigate: NavigateFunction) => {
-  return useMutation(AuthAPI.register, {
-    onSuccess: async (isRegretter, value) => {
-      if (isRegretter) {
+  return useMutation({
+    mutationFn: AuthAPI.register,
+    onSuccess: async (isRegrester, value) => {
+      if (isRegrester) {
         const loginInfo = await AuthAPI.login({
           userName: value?.userName,
           password: value?.password,

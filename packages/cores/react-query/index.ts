@@ -1,5 +1,5 @@
+import { QueryCache } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
-import { QueryCache } from 'react-query';
 
 const getReactQueryOptions = (envConfig: Record<string, any>) => {
   const {

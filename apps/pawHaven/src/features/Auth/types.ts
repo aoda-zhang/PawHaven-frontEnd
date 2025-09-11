@@ -1,5 +1,6 @@
 export type UserInfoType = {
   userName: string;
+  userID: string;
   [key: string]: unknown;
 };
 

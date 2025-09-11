@@ -1,33 +1,20 @@
 import { Button } from '@mui/material';
 import FormInput from '@shared/components/Form/FormInput';
-import storageKeys from '@shared/constants/storageKeys';
-import storage from '@shared/utils/storage';
 import { type FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { useMutation } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 
-import * as AuthAPI from '../apis';
+import { useRegister } from '../apis/queries';
 import style from '../index.module.css';
 
 import routePaths from '@/route/routePaths';
-import { setUserInfo } from '@/store/globalReducer';
 
 const Register: FC = () => {
   const formProps = useForm({});
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { mutate, isLoading } = useMutation(AuthAPI.login, {
-    onSuccess: (loginInfo) => {
-      if (loginInfo?.accessToken && loginInfo?.refreshToken) {
-        storage.set(storageKeys.accessToken, loginInfo?.accessToken);
-        storage.set(storageKeys.refreshToken, loginInfo?.refreshToken);
-        setUserInfo(loginInfo?.baseUserInfo);
-        navigate('/trip/step1');
-      }
-    },
-  });
+  const { mutate, isPending } = useRegister();
   return (
     <div className={style.loginForm}>
       <div className={style.welcomeText}>{t('auth.sighup')}</div>
@@ -49,7 +36,7 @@ const Register: FC = () => {
             name="password"
           />
           <Button
-            disabled={isLoading}
+            disabled={isPending}
             type="submit"
             className={style.baseForm}
             variant="contained"

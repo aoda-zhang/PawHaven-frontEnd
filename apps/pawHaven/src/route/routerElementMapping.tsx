@@ -11,6 +11,7 @@ import Home from '@/features/Home';
 import RootLayout from '@/layout';
 
 const ReportStray = lazy(() => import('@/features/ReportStray'));
+const ReportDetail = lazy(() => import('@/features/RescueDetail'));
 
 // Please use SuspenseWrapper to wrap the lazy loaded components
 
@@ -28,6 +29,11 @@ const routerElementMapping: Record<string, ReactElement> = {
   report_stray: (
     <SuspenseWrapper>
       <ReportStray />
+    </SuspenseWrapper>
+  ),
+  rescue_detail: (
+    <SuspenseWrapper>
+      <ReportDetail />
     </SuspenseWrapper>
   ),
   notFund: <NotFund />,

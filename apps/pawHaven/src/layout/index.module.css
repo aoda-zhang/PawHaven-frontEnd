@@ -1,7 +1,7 @@
 @reference "../../../../packages/theme/global.css";
 
 .layout {
-  @apply flex flex-col box-border h-full;
+  @apply flex flex-col box-border h-full min-h-dvh;
   .header {
     @apply flex items-center gap-4 box-border sticky top-0 p-[.625rem] z-[999] border-b-1 px-6 py-4 bg-white;
   }

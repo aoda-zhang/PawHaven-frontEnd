@@ -86,6 +86,7 @@
     font-size: 16px;
     width: 100vw;
     height: 100%;
+    min-height: 100vh;
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-family-sans);

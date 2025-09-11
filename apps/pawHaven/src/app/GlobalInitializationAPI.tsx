@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { RouteObject } from 'react-router-dom';
 
 // Fetch menu from server side
@@ -49,6 +49,11 @@ const getDynamicRouters = () => {
           path: '/report-stray',
           element: 'report_stray',
         },
+        {
+          path: '/rescue/:animalID',
+          element: 'rescue_detail',
+          handle: { isRequireUserLogin: false },
+        },
       ],
     },
     {
@@ -79,16 +84,16 @@ export const HomeQueryKeys = {
   GET_DEFAULT_TRIP_ROUTER: 'GET_DEFAULT_TRIP_ROUTER',
 };
 
-export const useFetchGlobalMenu = () => {
+export const useFetchGlobalMenu = (userID: string) => {
   return useQuery({
-    queryKey: [HomeQueryKeys.GET_DEFAULT_TRIP_MENU],
+    queryKey: [HomeQueryKeys.GET_DEFAULT_TRIP_MENU, userID],
     queryFn: getDefaultDynamicMenu,
   });
 };
 
-export const useFetchGlobalRouters = () => {
+export const useFetchGlobalRouters = (userID: string) => {
   return useQuery<RouteObject[]>({
-    queryKey: [HomeQueryKeys.GET_DEFAULT_TRIP_ROUTER],
+    queryKey: [HomeQueryKeys.GET_DEFAULT_TRIP_ROUTER, userID],
     queryFn: getDynamicRouters,
   });
 };

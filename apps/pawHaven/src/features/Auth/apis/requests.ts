@@ -2,13 +2,11 @@ import httpService from '@shared/cores/http';
 
 import { AuthFieldType, LoginInfo } from '../types';
 
-export const register = (userInfo: AuthFieldType) => {
+export const register = (userInfo: AuthFieldType): Promise<LoginInfo> => {
   return httpService.post('/auth/register', userInfo);
 };
 
-export const login = (
-  userInfo: Omit<AuthFieldType, 'phoneNumber'>,
-): Promise<LoginInfo> => {
+export const login = (userInfo: AuthFieldType): Promise<LoginInfo> => {
   return httpService.post('/auth/v1/login', userInfo);
 };
 

@@ -87,15 +87,12 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
               ...option,
               label: t(option.label),
             }))}
-            required
-            rules={{ required: t('reportStray.animal_type_required') }}
           />
           {methods.watch('animalType') === 'other' && (
             <FormInput
               name="animalTypeOther"
               placeholder={t('reportStray.enter_other_type_placeholder')}
               className={styles.formGroup}
-              required
             />
           )}
 
@@ -116,7 +113,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             label={t('reportStray.color')}
             placeholder={t('reportStray.enter_color')}
             className={styles.formGroup}
-            required
           />
 
           <FormCheckbox
@@ -152,8 +148,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="foundTime"
             label={t('reportStray.found_time')}
             type="datetime-local"
-            required
-            rules={{ required: t('reportStray.found_time_required') }}
             className={styles.formGroup}
           />
 
@@ -171,8 +165,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="statusDescription"
             label={t('reportStray.status_description')}
             placeholder={t('reportStray.describe_status')}
-            required
-            rules={{ required: t('reportStray.status_description_required') }}
             className={styles.formGroup}
           />
         </FormSection>
@@ -191,8 +183,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="contactInfo.name"
             label={t('reportStray.name')}
             placeholder={t('reportStray.enter_name')}
-            required
-            rules={{ required: t('reportStray.name_required') }}
             className={styles.formGroup}
           />
 
@@ -201,8 +191,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             label={t('reportStray.phone')}
             type="tel"
             placeholder={t('reportStray.enter_phone')}
-            required
-            rules={{ required: t('reportStray.phone_required') }}
             className={styles.formGroup}
           />
 

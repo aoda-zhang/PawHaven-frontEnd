@@ -28,7 +28,15 @@
     "love_story": "Love Story",
     "owner_text": "© 2023 PawHaven by <a href='https://aoda.vercel.app' target='_blank' rel='noopener noreferrer' class='link'  >Aoda Zhang</a>. All rights reserved.",
     "system_error": "System Error",
-    "system_error_info": "An unexpected error occurred. Please try again later."
+    "system_error_info": "An unexpected error occurred. Please try again later.",
+    "recent_rescue": "Latest Rescue Updates",
+    "rescue_status_pending": "Pending",
+    "rescue_status_inProgress": "In Progress",
+    "rescue_status_treated": "Treated",
+    "rescue_status_recovering": "Recovering",
+    "rescue_status_awaitingAdoption": "Awaiting Adoption",
+    "rescue_status_adopted": "Adopted",
+    "rescue_status_failed": "Failed"
   },
   "auth": {
     "login": "LOG IN",
@@ -49,15 +57,7 @@
   "home": {
     "home_page": "Home Page",
     "rescue": "Rescue",
-    "support": "Support",
-    "recent_rescue": "Latest Rescue Updates",
-    "rescue_status_pending": "Pending",
-    "rescue_status_inProgress": "In Progress",
-    "rescue_status_treated": "Treated",
-    "rescue_status_recovering": "Recovering",
-    "rescue_status_awaitingAdoption": "Awaiting Adoption",
-    "rescue_status_adopted": "Adopted",
-    "rescue_status_failed": "Failed"
+    "report": "Report a Stray "
   },
   "reportStray": {
     "report_animal": "Report Stray Animal",
