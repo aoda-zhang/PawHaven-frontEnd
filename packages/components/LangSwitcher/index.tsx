@@ -75,6 +75,7 @@ const LangSwitcher = () => {
         anchorEl={anchorEl}
         onClose={handleClose}
         classes={{ paper: styles.popover }}
+        disableScrollLock
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'left',
