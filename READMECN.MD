@@ -1,4 +1,4 @@
-# PawHaven 中文版本
+# PawHaven
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232a?logo=react&logoColor=61dafb)
@@ -10,9 +10,7 @@
 
 ## 🌟 这是什么？
 
-PawHaven 不仅仅是一个应用，更是一场用科技传递温度的行动。我们的使命是为每一个普通人提供简单易用的工具，让大家能够真正参与到流浪动物的救助中。通过众包的方式收集流浪动物信息，加快救助响应，提升关爱效率。
-
-此外，PawHaven 还是一个面向开发者的全栈学习项目，无论你是初学者还是希望提升技能的开发者，都能在这里获得从前端界面、后端 API 到部署上线的实战经验。
+PawHaven 是一个基于 React 和 Node.js（NestJS） 的全栈项目。通过这个项目，你不仅可以学习和实践 React 与 NestJS 的生态开发与最佳实践，还能全面掌握基于 JavaScript 的全栈开发和 DevOps 能力。与此同时，PawHaven 也是一个致力于流浪动物救助的公益项目，我希望用技术让更多人能够参与到救助行动中。目前项目由我独立维护，欢迎志同道合的朋友加入，共同让 PawHaven 真正帮助到流浪动物。
 
 ---
 
@@ -30,7 +28,7 @@ PawHaven 不仅仅是一个应用，更是一场用科技传递温度的行动�
 
 - **前端：** React、Redux、TypeScript、Tailwind CSS、React Hook Form
 - **后端：** NestJS、Node.js、REST & RPC API
-- **数据库：** PostgreSQL（或其他 SQL 数据库）
+- **数据库：** MongoDB
 - **认证：** 基于 JWT 的身份验证与角色管理
 - **部署：** Kubernetes、Docker、GitHub Actions CI/CD
 
@@ -44,7 +42,7 @@ PawHaven 不仅仅是一个应用，更是一场用科技传递温度的行动�
 
 无论是代码、设计、测试，还是宣传推广，你的每一份贡献都让项目更强大，让世界更温暖。
 
-让我们一起，为每一只需要帮助的爪子打造安全港湾。
+让我们一起，为每一只需要帮助的流浪动物打造安全港湾。
 
 ---
 
@@ -63,5 +61,3 @@ PawHaven 不仅仅是一个应用，更是一场用科技传递温度的行动�
 - 联系方式：请在 GitHub 上提交 issue 或 pull request。
 
 ---
-
-感谢你加入 PawHaven —— 让科技与关爱同行，让每一只爪子都被看见！🐾❤️
