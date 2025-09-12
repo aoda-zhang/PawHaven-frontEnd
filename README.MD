@@ -11,7 +11,7 @@
 
 ## ✨ What is this?
 
-PawHaven is a full-stack project built with React and Node.js, dedicated to helping stray animals. My goal is to use technology to make it easier for people to participate in animal rescue — one of the key reasons I love software development. Currently, I maintain the project on my own, and I welcome anyone who shares the same passion to join and make PawHaven truly impactful for stray animals.
+PawHaven is a full-stack project built with React and Node.js (NestJS). It provides hands-on experience with modern web development, covering React and NestJS best practices, full-stack JavaScript development, and DevOps workflows. At the same time, PawHaven is a nonprofit initiative dedicated to stray animal rescue. My goal is to leverage technology to encourage more people to take part in rescue efforts. I currently maintain the project on my own and welcome collaborators who share the same passion to join and make PawHaven truly impactful for stray animals.
 
 ---
 
