@@ -11,9 +11,7 @@
 
 ## ✨ What is this?
 
-PawHaven is more than just an app — it’s a movement to unite tech with heart. Our mission is to empower everyday people with a simple, user-friendly tool to make a real difference in the lives of stray animals. By crowdsourcing information about strays, we enable faster rescue and better care.
-
-Additionally, PawHaven is a full-stack project designed for developers who want to grow their skills in modern web development. Whether you are a beginner or looking to deepen your knowledge, this project provides practical experience across the entire stack — from frontend UI to backend APIs and deployment.
+PawHaven is a full-stack project built with React and Node.js, dedicated to helping stray animals. My goal is to use technology to make it easier for people to participate in animal rescue — one of the key reasons I love software development. Currently, I maintain the project on my own, and I welcome anyone who shares the same passion to join and make PawHaven truly impactful for stray animals.
 
 ---
 
@@ -30,8 +28,6 @@ Additionally, PawHaven is a full-stack project designed for developers who want 
 ## 🛠️ Technology Stack
 
 - **Frontend:** React, Redux, TypeScript, Tailwind CSS, React Hook Form
-
-
 - **Backend:** NestJS, Node.js, REST & RPC APIs
 - **Database:** PostgreSQL (or your preferred SQL database)
 - **Authentication:** JWT-based auth with role management
