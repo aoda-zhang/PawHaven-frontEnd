@@ -1,6 +1,8 @@
 import { Comment } from '@/features/RescueDetail/components/RescueInteraction';
-import { RescueParticipantType } from '@/features/RescueDetail/components/RescueTimeline';
-import { RescueUpdate } from '@/features/RescueDetail/types';
+import {
+  RescueParticipantType,
+  RescueUpdate,
+} from '@/features/RescueDetail/types';
 
 export type AnimalRescueStatus =
   | 'pending'

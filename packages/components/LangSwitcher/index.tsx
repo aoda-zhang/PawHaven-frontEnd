@@ -1,24 +1,12 @@
-import { styled } from '@mui/material/styles';
-import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
+import { Popover } from '@mui/material';
 import { ChevronDown, Globe } from 'lucide-react';
-import { memo, useMemo } from 'react';
+import React, { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import StorageKeys from '../../constants/storageKeys';
 import storageTool from '../../utils/storage';
 
 import styles from './index.module.css';
-
-const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} arrow classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.arrow}`]: {
-    color: theme.palette.common.white,
-  },
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.common.white,
-  },
-}));
 
 const LanguageSelect = () => {
   const { i18n, t } = useTranslation();
@@ -48,14 +36,53 @@ const LanguageSelect = () => {
 
 const LangSwitcher = () => {
   const { i18n, t } = useTranslation();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setAnchorEl(event.currentTarget);
+    }
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
   return (
-    <BootstrapTooltip title={<LanguageSelect />}>
-      <div className={styles.lang}>
+    <>
+      <div
+        className={styles.lang}
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+        aria-haspopup="true"
+        aria-expanded={open}
+      >
         <Globe />
         {t(`common.${i18n.language}`)}
         <ChevronDown size={26} />
       </div>
-    </BootstrapTooltip>
+      <Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        classes={{ paper: styles.popover }}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+      >
+        <LanguageSelect />
+      </Popover>
+    </>
   );
 };
 export default memo(LangSwitcher);

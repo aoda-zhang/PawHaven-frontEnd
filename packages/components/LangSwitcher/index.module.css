@@ -11,3 +11,7 @@
     }
   }
 }
+
+.popover {
+  @apply p-2 bg-white rounded-lg shadow-lg ml-9 mt-1;
+}

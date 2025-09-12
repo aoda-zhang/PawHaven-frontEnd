@@ -1,23 +1,17 @@
+import classNames from 'classnames';
 import { Clock, CheckCircle, User } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import styles from '../index.module.css';
 
-const statusColorMapping = {
-  pending: 'text-rescue-pending',
-  inProgress: 'text-rescue-inProgress',
-  treated: 'text-rescue-treated',
-  recovering: 'text-rescue-recovering',
-  awaitingAdoption: 'text-rescue-awaitingAdoption',
-  adopted: 'text-rescue-adopted',
-  failed: 'text-rescue-failed',
-};
+import { RescueStatusType } from '@/features/Home/types';
+import getStatusColor from '@/utils/getStatusColor';
 
 export interface RescueUpdate {
   id: string;
   timestamp: string;
-  status: keyof typeof statusColorMapping;
+  status: RescueStatusType;
   content: string;
   operator: {
     name: string;
@@ -28,14 +22,6 @@ export interface RescueUpdate {
 
 interface RescueTimelineProps {
   updates: RescueUpdate[];
-}
-
-export interface RescueParticipantType {
-  id: string;
-  name: string;
-  avatar?: string;
-  role: 'reporter' | 'rescuer' | 'admin';
-  joinedAt: string;
 }
 
 const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
@@ -58,7 +44,10 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
             <div key={update.id} className={styles.timelineItem}>
               <div className={styles.timelineDotContainer}>
                 <div
-                  className={`${styles.timelineDot} ${statusColorMapping[update.status]}`}
+                  className={classNames([
+                    styles.timelineDot,
+                    getStatusColor({ status: update?.status, prefix: 'text' }),
+                  ])}
                 >
                   <CheckCircle size={16} />
                 </div>
@@ -71,7 +60,13 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
                 <div className={styles.updateHeader}>
                   <div className="flex items-center gap-2">
                     <span
-                      className={`font-medium ${statusColorMapping[update.status]}`}
+                      className={classNames([
+                        'font-medium',
+                        getStatusColor({
+                          status: update?.status,
+                          prefix: 'text',
+                        }),
+                      ])}
                     >
                       {t(`common.rescue_status_${update.status}`)}
                     </span>

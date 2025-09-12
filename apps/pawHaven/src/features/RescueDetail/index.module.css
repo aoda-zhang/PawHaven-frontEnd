@@ -77,7 +77,7 @@
 }
 
 .timelineDotContainer {
-  @apply absolute left-[-29px] top-0 flex flex-col items-center;
+  @apply absolute left-[-1.5rem] top-3.5 flex flex-col items-center;
 }
 
 .timelineDot {

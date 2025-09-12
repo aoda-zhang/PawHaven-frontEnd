@@ -24,10 +24,6 @@
       }
     }
   }
-
-  .rootSidebarPaper {
-    @apply h-full bg-background text-text mt-20;
-  }
 }
 
 .login {
@@ -38,4 +34,8 @@
 }
 .menuItem {
   @apply cursor-pointer flex justify-center items-center p-sm border-b border-border md:border-none hover:text-primary;
+}
+
+.rootSidebarPaper {
+  @apply h-full bg-background text-text pt-7;
 }

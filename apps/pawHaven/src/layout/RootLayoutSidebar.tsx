@@ -18,10 +18,13 @@ const RootLayoutSidebar = ({
   navigate,
 }: RootLayoutSidebarProps) => {
   return (
-    <Drawer open={isSidebarOpen} anchor="right" onClose={onCloseSidebar}>
-      <div className={styles.rootSidebarPaper}>
-        <RootLayoutMenuRender menuItems={menuItems} navigate={navigate} />
-      </div>
+    <Drawer
+      open={isSidebarOpen}
+      anchor="right"
+      onClose={onCloseSidebar}
+      classes={{ paper: styles.rootSidebarPaper }}
+    >
+      <RootLayoutMenuRender menuItems={menuItems} navigate={navigate} />
     </Drawer>
   );
 };

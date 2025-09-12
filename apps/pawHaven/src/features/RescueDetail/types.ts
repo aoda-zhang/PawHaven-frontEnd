@@ -18,3 +18,11 @@ export interface RescueUpdate {
     longitude: number;
   };
 }
+
+export interface RescueParticipantType {
+  id: string;
+  name: string;
+  avatar?: string;
+  role: 'reporter' | 'rescuer' | 'admin';
+  joinedAt: string;
+}
