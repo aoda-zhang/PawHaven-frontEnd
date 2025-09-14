@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import styles from '../index.module.css';
 
 import { RescueStatusType } from '@/features/Home/types';
-import getStatusColor from '@/utils/getStatusColor';
+import getStatusColorByPrefix from '@/utils/getStatusColorByPrefix';
 
 export interface RescueUpdate {
   id: string;
@@ -46,7 +46,10 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
                 <div
                   className={classNames([
                     styles.timelineDot,
-                    getStatusColor({ status: update?.status, prefix: 'text' }),
+                    getStatusColorByPrefix({
+                      status: update?.status,
+                      prefix: 'text',
+                    }),
                   ])}
                 >
                   <CheckCircle size={16} />
@@ -62,7 +65,7 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
                     <span
                       className={classNames([
                         'font-medium',
-                        getStatusColor({
+                        getStatusColorByPrefix({
                           status: update?.status,
                           prefix: 'text',
                         }),

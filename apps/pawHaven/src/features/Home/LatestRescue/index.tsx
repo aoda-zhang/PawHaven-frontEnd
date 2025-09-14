@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useFetchLatestRescuesByNumber } from '../apis/queries';
 import { RescueItemType } from '../types';
 
-import getStatusColor from '@/utils/getStatusColor';
+import getStatusColorByPrefix from '@/utils/getStatusColorByPrefix';
 
 const RescueItem = ({
   animalID,
@@ -50,7 +50,7 @@ const RescueItem = ({
       <div
         className={classNames([
           'rounded-full text-center text-white py-2',
-          getStatusColor({ status, prefix: 'bg' }),
+          getStatusColorByPrefix({ status, prefix: 'bg' }),
         ])}
       >
         {t(`common.rescue_status_${status}`)}
