@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import { useRegister } from '../apis/queries';
-import style from '../index.module.css';
+import style from '../authLayout.module.css';
 
 import routePaths from '@/route/routePaths';
 

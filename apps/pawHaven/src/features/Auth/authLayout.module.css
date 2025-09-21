@@ -19,7 +19,7 @@
       }
     }
     .loginForm {
-      @apply flex flex-1 flex-col justify-center box-border lg:p-16 shadow-md;
+      @apply flex flex-1 flex-col justify-center box-border p-6 lg:p-16 shadow-md;
       .welcomeText {
         @apply text-2xl mb-5 text-center;
       }
