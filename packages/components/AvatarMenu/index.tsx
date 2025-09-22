@@ -1,4 +1,4 @@
-import { type FC, memo } from 'react';
+import { type FC } from 'react';
 
 type Props = {
   userInfo: Record<string, any>;
@@ -7,4 +7,4 @@ type Props = {
 const AvatarMenu: FC<Props> = () => {
   return <div>touxiang</div>;
 };
-export default memo(AvatarMenu);
+export default AvatarMenu;

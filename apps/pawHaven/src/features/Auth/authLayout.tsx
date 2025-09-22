@@ -1,5 +1,5 @@
 import Brand from '@shared/components/Brand';
-import { type FC, memo } from 'react';
+import { type FC } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import style from './authLayout.module.css';
@@ -15,4 +15,4 @@ const AuthLayout: FC = () => {
     </div>
   );
 };
-export default memo(AuthLayout);
+export default AuthLayout;

@@ -6,7 +6,7 @@ import {
   type SelectProps,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import styles from '../formBase.module.css';
@@ -52,4 +52,4 @@ const FormSelect: React.FC<BaseFormType & BaseSelectType & SelectProps> = ({
   );
 };
 
-export default memo(FormSelect);
+export default FormSelect;

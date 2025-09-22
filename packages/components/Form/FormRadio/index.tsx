@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import formBaseStyle from '../formBase.module.css';
@@ -64,4 +64,4 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
   );
 };
 
-export default memo(FormRadio);
+export default FormRadio;

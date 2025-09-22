@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import Hero from './Hero';
 import styles from './index.module.css';
 import LatestRescue from './LatestRescue';
@@ -15,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default memo(Home);
+export default Home;

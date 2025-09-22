@@ -26,7 +26,15 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
-  plugins: [react(), ViteYaml(), tailwindcss()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler', { target: '19' }]],
+      },
+    }),
+    ViteYaml(),
+    tailwindcss(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

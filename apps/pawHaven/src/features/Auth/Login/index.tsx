@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import FormInput from '@shared/components/Form/FormInput';
-import { type FC, memo } from 'react';
+import { type FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -68,4 +68,4 @@ const Login: FC = () => {
     </div>
   );
 };
-export default memo(Login);
+export default Login;

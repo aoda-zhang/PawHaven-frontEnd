@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import {
   NavigateFunction,
   Outlet,
@@ -41,4 +40,4 @@ const RootLayout = () => {
   );
 };
 
-export default memo(RootLayout);
+export default RootLayout;

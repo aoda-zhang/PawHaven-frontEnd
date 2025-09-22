@@ -1,6 +1,6 @@
 import { Popover } from '@mui/material';
 import { ChevronDown, Globe } from 'lucide-react';
-import React, { memo, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import StorageKeys from '../../constants/storageKeys';
@@ -86,4 +86,4 @@ const LangSwitcher = () => {
     </>
   );
 };
-export default memo(LangSwitcher);
+export default LangSwitcher;

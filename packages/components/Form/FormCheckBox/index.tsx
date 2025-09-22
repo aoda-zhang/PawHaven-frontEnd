@@ -5,7 +5,7 @@ import {
   type CheckboxProps,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import styles from '../formBase.module.css';
@@ -46,4 +46,4 @@ const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
   );
 };
 
-export default memo(FormCheckbox);
+export default FormCheckbox;

@@ -1,6 +1,6 @@
 import { TextField, type TextFieldProps } from '@mui/material';
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import styles from '../formBase.module.css';
@@ -44,4 +44,4 @@ const FormInput: React.FC<
   );
 };
 
-export default memo(FormInput);
+export default FormInput;

@@ -5,7 +5,7 @@ import {
   type TextareaAutosizeProps,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import styles from '../formBase.module.css';
@@ -52,4 +52,4 @@ const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
   );
 };
 
-export default memo(FormTextArea);
+export default FormTextArea;
