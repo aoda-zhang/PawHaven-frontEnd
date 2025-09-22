@@ -34,10 +34,14 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
     <div
       className={`${styles.timelineContainer} bg-white rounded-lg shadow-md p-6 mt-6`}
     >
-      <h2 className={styles.timelineTitle}>{t('pawHaven.rescue_timeline')}</h2>
+      <h2 className={styles.timelineTitle}>
+        {t('reportStray.rescue_timeline')}
+      </h2>
 
       {sortedUpdates.length === 0 ? (
-        <p className={styles.emptyTimeline}>{t('pawHaven.no_updates_yet')}</p>
+        <p className={styles.emptyTimeline}>
+          {t('reportStray.no_updates_yet')}
+        </p>
       ) : (
         <div className={styles.timelineItems}>
           {sortedUpdates.map((update, index) => (

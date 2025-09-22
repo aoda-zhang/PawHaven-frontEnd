@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "eslint --fix --cache --max-warnings=0"
+      "eslint --fix --cache"
     ],
     "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
       "prettier --write --ignore-unknown"

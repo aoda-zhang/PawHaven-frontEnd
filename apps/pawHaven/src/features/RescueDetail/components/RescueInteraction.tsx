@@ -128,13 +128,13 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
       </div>
 
       <div className={styles.commentsSection}>
-        <h3 className={styles.commentsTitle}>{t('pawHaven.comments')}</h3>
+        <h3 className={styles.commentsTitle}>{t('reportStray.comments')}</h3>
 
         <div className={styles.commentInputContainer}>
           <TextareaAutosize
             value={commentContent}
             onChange={(e) => setCommentContent(e.target.value)}
-            placeholder={t('pawHaven.leave_comment_placeholder')}
+            placeholder={t('reportStray.leave_comment_placeholder')}
             className={styles.commentInput}
             minRows={3}
           />
@@ -143,7 +143,7 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
             disabled={!commentContent.trim()}
             className={styles.submitComment}
           >
-            {t('common.submit')}
+            {t('reportStray.submit')}
           </Button>
         </div>
 

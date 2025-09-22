@@ -117,6 +117,8 @@
     "submit": "Meldung abschicken",
     "submitting": "Wird gesendet...",
     "submit_success": "Meldung erfolgreich gesendet! Vielen Dank für Ihre Hilfe für Streuner!",
-    "enter_other_type_placeholder": "Bitte geben Sie eine andere Tierart ein"
+    "enter_other_type_placeholder": "Bitte geben Sie eine andere Tierart ein",
+    "rescue_timeline": "Rettungszeitachse",
+    "comments": "Kommentare"
   }
 }
