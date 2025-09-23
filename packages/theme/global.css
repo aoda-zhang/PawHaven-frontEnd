@@ -97,6 +97,17 @@
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-family-sans);
+    /*
+      Whether to set a fixed font-size here depends on your business needs:
+      - If you want a consistent font size and layout across all devices and browsers, set a fixed root font-size (e.g., font-size: var(--font-size-base);).
+      - If accessibility is important (e.g., allowing users to use large fonts for the elderly), do NOT set a fixed font-size here. This way, the root font-size will respect the user's browser or system font-size preference.
+      Uncomment the line below to enforce a fixed base font size, or leave it commented for better accessibility.
+    */
+
+    /* 
+      PawHaven from the very beginning aims to include everyone. Because we want to adapt to the needs of more people, we do not set a fixed root font-size. Instead, we let the site read and respect the font-size configured in the user's browser.
+     */
+
     /* font-size: var(--font-size-base); */
   }
   #root {
