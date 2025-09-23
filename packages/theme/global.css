@@ -36,49 +36,56 @@
   --color-rescue-adopted: #22c55e; /* adopted */
   --color-rescue-failed: #6b7280; /* failed rescue */
 
+  /* === Font Sizes === */
+  --font-size-base: 16px;
+  --line-height-base: 1.5rem;
+
+  --font-size-xs: 0.75rem;
+  --line-height-xs: 1rem;
+
+  --font-size-sm: 0.875rem;
+  --line-height-sm: 1.25rem;
+
+  --font-size-lg: 1.125rem;
+  --line-height-lg: 1.75rem;
+
+  --font-size-xl: 1.25rem;
+  --line-height-xl: 1.75rem;
+
+  --font-size-2xl: 1.5rem;
+  --line-height-2xl: 2rem;
+
+  --font-size-3xl: 1.875rem;
+  --line-height-3xl: 2.25rem;
+
+  --font-size-4xl: 2.25rem;
+  --line-height-4xl: 2.5rem;
+
+  /* === Font Families === */
+  --font-family-sans: 'Inter', 'Nunito', sans-serif, system-ui;
+  --font-family-friendly:
+    'Poppins', 'Nunito', 'Helvetica', 'Arial', sans-serif, system-ui;
+  --font-family-serif: 'Merriweather', serif, system-ui;
+  --font-family-handwriting: 'Patrick Hand', cursive;
+
   /* === Spacing === */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-
-  /* === Font Sizes === */
-  --font-size-xs: 0.75rem; /* 12px */
-  --line-height-xs: 1rem; /* 16px */
-
-  --font-size-sm: 0.875rem; /* 14px */
-  --line-height-sm: 1.25rem; /* 20px */
-
-  --font-size-base: 1rem; /* 16px */
-  --line-height-base: 1.5rem; /* 24px */
-
-  --font-size-lg: 1.125rem; /* 18px */
-  --line-height-lg: 1.75rem; /* 28px */
-
-  --font-size-xl: 1.25rem; /* 20px */
-  --line-height-xl: 1.75rem; /* 28px */
-
-  --font-size-2xl: 1.5rem; /* 24px */
-  --line-height-2xl: 2rem; /* 32px */
-
-  --font-size-3xl: 1.875rem; /* 30px */
-  --line-height-3xl: 2.25rem; /* 36px */
-
-  --font-size-4xl: 2.25rem; /* 36px */
-  --line-height-4xl: 2.5rem; /* 40px */
-
-  --font-size-5xl: 3rem; /* 48px */
-  --line-height-5xl: 1;
-
-  --font-size-6xl: 3.75rem; /* 60px */
-  --line-height-6xl: 1;
-
-  /* === Font Families === */
-  --font-family-sans: 'Inter', 'Nunito', sans-serif;
-  --font-family-friendly: 'Poppins', 'Nunito', 'Helvetica', 'Arial', sans-serif;
-  --font-family-serif: 'Merriweather', serif;
-  --font-family-handwriting: 'Patrick Hand', cursive;
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
 }
 
 @layer base {
@@ -90,6 +97,7 @@
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: var(--font-family-sans);
+    /* font-size: var(--font-size-base); */
   }
   #root {
     min-height: 100vh;

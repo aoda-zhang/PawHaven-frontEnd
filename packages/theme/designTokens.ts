@@ -25,14 +25,7 @@ const designTokens = {
     warning: '#F59E0B',
   },
   spacing: {
-    base: 4, // used for MUI (4px)
-  },
-  font: {
-    familySans: `'Inter', 'Nunito', sans-serif`,
-    familyFriendly: `'Poppins', 'Nunito', 'Helvetica', 'Arial', sans-serif`,
-    familySerif: `'Merriweather', serif`,
-    familyHandwriting: `'Patrick Hand', cursive`,
-    baseSize: 16,
+    base: '0.25rem', // 4px
   },
 };
 

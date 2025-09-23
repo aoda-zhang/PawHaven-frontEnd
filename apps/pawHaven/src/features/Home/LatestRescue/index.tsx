@@ -95,7 +95,7 @@ const LatestRescue = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(26rem,1fr))] gap-4">
         {rescues?.map((item) => (
           <RescueItem {...item} key={item.name} />
         ))}

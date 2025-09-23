@@ -1,6 +1,6 @@
 @reference "../../../packages/theme/global.css";
 .item {
-  @apply text-[1rem] px-[.5625rem] py-[.375rem];
+  @apply text-base p-1;
 }
 .avatar {
   @apply cursor-pointer bg-blue-600;

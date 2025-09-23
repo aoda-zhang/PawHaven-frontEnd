@@ -40,10 +40,6 @@ const MUITheme = createTheme({
     },
   },
   spacing: designTokens.spacing.base,
-  typography: {
-    fontFamily: designTokens.font.familySans,
-    fontSize: designTokens.font.baseSize,
-  },
 });
 
 export default MUITheme;

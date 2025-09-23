@@ -1,6 +1,6 @@
 @reference "../../theme/global.css";
 .label {
-  @apply text-[1rem] mb-[.625rem] font-normal;
+  @apply mb-3;
 }
 
 .baseFormContainer {
