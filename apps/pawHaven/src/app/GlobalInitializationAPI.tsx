@@ -14,7 +14,7 @@ const getDefaultDynamicMenu = () => {
     },
     {
       label: 'common.stories',
-      to: '/trip/history',
+      to: '/rescue/story',
       classNames: ['menuItem'],
       type: 'link',
     },

@@ -16,7 +16,7 @@ export const useUserRegister = (navigate: NavigateFunction) => {
         });
         await storage.set(storageKeys.accessToken, loginInfo.accessToken);
         await storage.set(storageKeys.refreshToken, loginInfo.refreshToken);
-        navigate('/trip');
+        navigate('/');
       }
     },
   });
@@ -33,7 +33,7 @@ export const useUserLogin = (navigate: NavigateFunction) => {
         });
         await storage.set(storageKeys.accessToken, loginInfo.accessToken);
         await storage.set(storageKeys.refreshToken, loginInfo.refreshToken);
-        navigate('/trip');
+        navigate('/');
       }
     },
   });

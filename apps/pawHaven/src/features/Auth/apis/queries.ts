@@ -17,7 +17,7 @@ export const useLogin = () => {
         storage.set(storageKeys.accessToken, loginInfo?.accessToken);
         storage.set(storageKeys.refreshToken, loginInfo?.refreshToken);
         setUserInfo(loginInfo?.baseUserInfo);
-        navigate('/trip/step1');
+        navigate('/');
       }
     },
   });
@@ -32,7 +32,7 @@ export const useRegister = () => {
         storage.set(storageKeys.accessToken, loginInfo?.accessToken);
         storage.set(storageKeys.refreshToken, loginInfo?.refreshToken);
         setUserInfo(loginInfo?.baseUserInfo);
-        navigate('/trip/step1');
+        navigate('/');
       }
     },
   });
