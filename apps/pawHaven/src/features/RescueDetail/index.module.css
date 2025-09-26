@@ -5,11 +5,11 @@
 }
 
 .basicInfoContainer {
-  @apply w-full;
+  @apply w-full bg-white rounded-lg shadow-md;
 }
 
-.imageContainer {
-  @apply relative w-full h-64 md:h-80;
+.reportAnimalPic {
+  @apply h-100 w-auto;
 }
 
 .animalImage {

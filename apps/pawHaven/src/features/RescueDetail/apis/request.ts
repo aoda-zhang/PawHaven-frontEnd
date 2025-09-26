@@ -8,31 +8,31 @@ export const getAnimalDetail = (id: string) => {
 
   const animal: AnimalDetail = {
     id: 'animal_007',
-    name: '煤球',
+    name: 'Coal',
     animalType: 'cat',
     age: 'young',
     appearance: {
-      color: '黑色',
+      color: 'Black',
       hasInjury: false,
-      otherFeatures: '绿眼睛，短毛，尾巴蓬松',
+      otherFeatures: 'Green eyes, short hair, fluffy tail',
       injuryDescription: '',
     },
     location: {
-      address: '北京市朝阳区建国路88号写字楼下',
+      address: 'No. 88 Jianguo Road, Chaoyang District, Beijing',
       latitude: 39.908823,
       longitude: 116.39747,
     },
     foundTime: '2023-11-12T08:45:00Z',
     status: 'pending',
-    statusDescription: '发现时在写字楼楼下晒太阳，主动蹭人，已做初步健康检查',
-    images: [
-      'https://pawhaven-mock.com/animals/coal_1.jpg',
-      'https://pawhaven-mock.com/animals/coal_2.jpg',
-      'https://pawhaven-mock.com/animals/coal_3.jpg',
+    statusDescription:
+      'Found sunbathing downstairs of the office building, very friendly, already had a preliminary health check',
+    reporterPhotos: [
+      'https://daoinsights.com/wp-content/webp-express/webp-images/uploads/2022/03/anoir-chafik-2_3c4dIFYFU-unsplash-1870x1169.jpg.webp',
+      'https://media.4-paws.org/1/b/1/4/1b14c5ffc386210e11c20c5dd139b772af045503/VIER%20PFOTEN_2023-10-19_00181-3801x2534-3662x2534-1920x1329.jpg',
     ],
     reporter: {
       id: 'user_102',
-      name: '陈小姐',
+      name: 'Ms. Chen',
       contactInfo: {
         phone: '13576543210',
         email: 'chen@example.com',
@@ -43,11 +43,11 @@ export const getAnimalDetail = (id: string) => {
       {
         id: 'update_001',
         timestamp: '2023-11-12T09:10:00Z',
-        content: '用户陈小姐上报发现流浪猫',
+        content: 'User Ms. Chen reported finding a stray cat',
         status: 'pending',
         operator: {
           id: 'user_102',
-          name: '陈小姐',
+          name: 'Ms. Chen',
           avatar: 'https://pawhaven-mock.com/avatars/user102.jpg',
           role: 'reporter',
         },
@@ -58,9 +58,10 @@ export const getAnimalDetail = (id: string) => {
         {
           id: 'comment_001',
           userId: 'user_201',
-          userName: '李同学',
+          userName: 'Student Li',
           avatar: 'https://pawhaven-mock.com/avatars/user201.jpg',
-          content: '这只猫我见过！上周在附近公园也出现过',
+          content:
+            'I’ve seen this cat! It was also in the nearby park last week',
           timestamp: '2023-11-12T10:05:00Z',
           likes: 3,
         },
@@ -68,7 +69,7 @@ export const getAnimalDetail = (id: string) => {
       rescueParticipants: [
         {
           id: 'volunteer_05',
-          name: '王志愿',
+          name: 'Volunteer Wang',
           avatar: 'https://pawhaven-mock.com/avatars/vol05.jpg',
           role: 'rescuer',
           joinedAt: '2023-11-12T11:30:00Z',

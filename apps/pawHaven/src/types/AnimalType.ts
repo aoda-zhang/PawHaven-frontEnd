@@ -32,7 +32,7 @@ export interface AnimalDetail {
   foundTime: string;
   status: AnimalRescueStatus;
   statusDescription: string;
-  images: string[];
+  reporterPhotos: string[];
   videos?: string[];
   reporter: {
     id: string;

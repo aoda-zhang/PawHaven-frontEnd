@@ -6,7 +6,6 @@ import {
   SingleInputDateRangeFieldProps,
 } from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
 import classNames from 'classnames';
-import { Dayjs } from 'dayjs';
 import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -14,7 +13,7 @@ import styles from '../formBase.module.css';
 import { BaseFormType } from '../formBase.type';
 
 type FormSingleDateRangerProps = BaseFormType &
-  Omit<SingleInputDateRangeFieldProps<Dayjs>, 'value' | 'onChange'> & {
+  Omit<SingleInputDateRangeFieldProps, 'value' | 'onChange'> & {
     fullWidth?: boolean;
   };
 

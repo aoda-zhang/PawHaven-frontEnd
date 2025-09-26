@@ -35,9 +35,10 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
     {
       id: '1',
       userId: 'u1',
-      userName: '志愿者小A',
+      userName: 'Volunteer A',
       avatar: '/assets/avatars/volunteer1.jpg',
-      content: '这只猫咪我见过，很亲人，已经联系了附近的宠物医院',
+      content:
+        'I’ve seen this cat, it’s very friendly, already contacted a nearby pet hospital',
       timestamp: '2023-10-21T09:30:00',
       likes: 5,
     },

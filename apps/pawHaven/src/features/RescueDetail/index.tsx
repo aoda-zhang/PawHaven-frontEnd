@@ -15,10 +15,10 @@ const RescueDetailPage = () => {
       id: 'update_001',
       timestamp: '2023-11-12T09:10:00Z',
       status: 'pending',
-      content: '用户陈小姐上报发现流浪猫',
+      content: 'User Ms. Chen reported finding a stray cat',
       operator: {
         id: 'user_102',
-        name: '陈小姐',
+        name: 'Ms. Chen',
         avatar: 'https://pawhaven-mock.com/avatars/user102.jpg',
         role: 'reporter',
       },
@@ -27,10 +27,10 @@ const RescueDetailPage = () => {
       id: 'update_002',
       timestamp: '2023-11-12T11:30:00Z',
       status: 'inProgress',
-      content: '志愿者小王接单前往救助',
+      content: 'Volunteer Wang accepted the request and went to rescue',
       operator: {
         id: 'volunteer_05',
-        name: '王志愿',
+        name: 'Volunteer Wang',
         avatar: 'https://pawhaven-mock.com/avatars/vol05.jpg',
         role: 'rescuer',
       },
@@ -39,10 +39,11 @@ const RescueDetailPage = () => {
       id: 'update_003',
       timestamp: '2023-11-12T14:20:00Z',
       status: 'treated',
-      content: '已将猫咪带至城西救助站，完成基础清洁',
+      content:
+        'The cat was taken to the West City Rescue Center and received basic cleaning',
       operator: {
         id: 'volunteer_05',
-        name: '王志愿',
+        name: 'Volunteer Wang',
         avatar: 'https://pawhaven-mock.com/avatars/vol05.jpg',
         role: 'rescuer',
       },
@@ -52,10 +53,11 @@ const RescueDetailPage = () => {
       id: 'update_004',
       timestamp: '2023-11-13T10:15:00Z',
       status: 'recovering',
-      content: '体检完成，身体健康，已接种基础疫苗',
+      content:
+        'Health check completed, in good condition, basic vaccines administered',
       operator: {
         id: 'clinic_03',
-        name: '爱心宠物医院',
+        name: 'Love Pet Clinic',
         avatar: 'https://pawhaven-mock.com/avatars/clinic03.jpg',
         role: 'admin',
       },

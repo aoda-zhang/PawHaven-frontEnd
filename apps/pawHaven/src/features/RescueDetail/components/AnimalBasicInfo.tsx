@@ -1,7 +1,9 @@
+import { Paper } from '@mui/material';
 import dayjs from 'dayjs';
 import { MapPin, Calendar, Info } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Carousel from 'react-material-ui-carousel';
 
 import styles from '../index.module.css';
 
@@ -15,16 +17,14 @@ const AnimalBasicInfo: React.FC<{ animal: AnimalDetail }> = ({ animal }) => {
   };
 
   return (
-    <div
-      className={`${styles.basicInfoContainer} bg-white rounded-lg shadow-md overflow-hidden`}
-    >
-      <div className={styles.imageContainer}>
-        {/* <img
-          src={animal.img || '/assets/default-animal.jpg'}
-          alt={animal.name}
-          className={styles.animalImage}
-        /> */}
-      </div>
+    <div className={styles.basicInfoContainer}>
+      <Carousel>
+        {animal?.reporterPhotos?.map((item) => (
+          <Paper key={item}>
+            <img src={item} alt={item} className={styles.reportAnimalPic} />
+          </Paper>
+        ))}
+      </Carousel>
 
       <div className={styles.infoContent}>
         <h1 className={styles.animalName}>{animal?.name}</h1>
