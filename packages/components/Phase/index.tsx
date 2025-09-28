@@ -1,7 +1,5 @@
 import { FC, ReactNode } from 'react';
 
-import styles from './index.module.css';
-
 interface SectionType {
   label: string | ReactNode;
   value: string | ReactNode;
@@ -15,12 +13,15 @@ interface Props {
 const Phase: FC<Props> = (props) => {
   const { title, sections } = props;
   return (
-    <div className={styles.phase}>
-      {title && <p className={styles.title}>{title}</p>}
+    <div className="border-b border-border pb-5 mb-3">
+      {title && <p className="text-2xl font-bold">{title}</p>}
       {sections?.map((section, idx) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <p key={idx} className={styles.section}>
-          <span className={styles.label}>{section.label}</span>
+        <p
+          // eslint-disable-next-line react/no-array-index-key
+          key={idx}
+          className="flex flex-row items-center justify-between mt-4 text-lg"
+        >
+          <span className="text-gray-500">{section.label}</span>
           <span> {section.value}</span>
         </p>
       ))}

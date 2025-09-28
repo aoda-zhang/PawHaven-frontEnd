@@ -8,10 +8,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import styles from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
-
-import textAreaStyle from './index.module.css';
 
 const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
   name,
@@ -32,13 +29,13 @@ const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
         fieldState: { error },
       }) => (
         <FormControl
-          className={clsx([props?.className, styles.baseFormContainer])}
+          className={clsx([props?.className, 'baseFormContainer'])}
           error={!!error}
           fullWidth={fullWidth}
         >
-          <div className={styles.label}>{label}</div>
+          <div className="mb-3">{label}</div>
           <TextareaAutosize
-            className={textAreaStyle.textareaLayout}
+            className="border border-neutral focus:border-2 focus:border-primary focus:outline-none"
             {...fieldProps}
             value={value ?? ''}
             ref={fieldRef}

@@ -9,7 +9,6 @@ import clsx from 'clsx';
 import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import styles from '../formBase.module.css';
 import { BaseFormType } from '../formBase.type';
 
 type FormSingleDateRangerProps = BaseFormType &
@@ -32,8 +31,8 @@ const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div className={clsx([props?.className, styles.baseFormContainer])}>
-          <div className={styles.label}>{label}</div>
+        <div className={clsx([props?.className, 'baseFormContainer'])}>
+          <div className="mb-3">{label}</div>
           <FormControl fullWidth={fullWidth} error={!!error}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <SingleInputDateRangeField

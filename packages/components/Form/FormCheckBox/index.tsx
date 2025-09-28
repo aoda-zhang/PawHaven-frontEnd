@@ -8,7 +8,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import styles from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
 
 const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
@@ -25,7 +24,7 @@ const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div className={clsx([props?.className, styles.baseFormContainer])}>
+        <div className={clsx([props?.className, 'baseFormContainer'])}>
           <FormControlLabel
             control={
               <Checkbox

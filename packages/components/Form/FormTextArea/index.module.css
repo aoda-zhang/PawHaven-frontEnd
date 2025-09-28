@@ -1,7 +1,0 @@
-@reference "../../../theme/global.css";
-.textareaLayout {
-  @apply border border-neutral;
-}
-.textareaLayout:focus {
-  @apply border-2 border-primary outline-none;
-}

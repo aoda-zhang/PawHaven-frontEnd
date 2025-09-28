@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import styles from '../formBase.module.css';
 import type { BaseFormType, BaseTextFieldType } from '../formBase.type';
 
 const FormInput: React.FC<
@@ -24,8 +23,8 @@ const FormInput: React.FC<
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div className={clsx([props?.className, styles.baseFormContainer])}>
-          <div className={styles.label}>{label}</div>
+        <div className={clsx([props?.className, 'baseFormContainer'])}>
+          <div className="mb-3">{label}</div>
           <TextField
             {...field}
             {...props}

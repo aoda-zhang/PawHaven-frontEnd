@@ -9,7 +9,6 @@ import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import styles from '../formBase.module.css';
 import type { BaseFormType, BaseSelectType } from '../formBase.type';
 
 const FormSelect: React.FC<BaseFormType & BaseSelectType & SelectProps> = ({
@@ -28,11 +27,11 @@ const FormSelect: React.FC<BaseFormType & BaseSelectType & SelectProps> = ({
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
         <FormControl
-          className={clsx([props?.className, styles.baseFormContainer])}
+          className={clsx([props?.className, 'baseFormContainer'])}
           error={!!error}
           fullWidth={fullWidth}
         >
-          <div className={styles.label}>{label}</div>
+          <div className="mb-3">{label}</div>
           <Select
             {...field}
             {...props}

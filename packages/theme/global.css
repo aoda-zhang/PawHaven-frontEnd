@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@import './common.css';
+
+@source "../components";
 
 @theme {
   /* === Core Colors (Warm & Friendly) === */
@@ -115,13 +118,4 @@
     display: flex;
     flex-direction: column;
   }
-}
-
-/* Common style class */
-.link {
-  @apply text-primary hover:underline;
-}
-
-.roundedButton {
-  @apply px-6 py-3 font-semibold rounded-full transition cursor-pointer;
 }

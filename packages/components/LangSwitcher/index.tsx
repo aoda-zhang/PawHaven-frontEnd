@@ -6,8 +6,6 @@ import { useTranslation } from 'react-i18next';
 import StorageKeys from '../../constants/storageKeys';
 import storageTool from '../../utils/storage';
 
-import styles from './index.module.css';
-
 const LanguageSelect = () => {
   const { i18n, t } = useTranslation();
   const supportedLanguages =
@@ -19,11 +17,11 @@ const LanguageSelect = () => {
     i18n.changeLanguage(language);
   };
   return (
-    <div className={styles.languageSelect}>
+    <div className="flex flex-col gap-[.625rem] text-[.875rem] p-[.625rem] text-gray-600 border-gray-400 rounded-[10%] border">
       {supportedLanguages?.map((item) => (
         <button
           key={item}
-          className={styles.item}
+          className="cursor-pointer text-left hover:border-b hover:border-gray-500"
           onClick={() => setLanguage(item)}
           type="button"
         >
@@ -58,7 +56,7 @@ const LangSwitcher = () => {
   return (
     <>
       <div
-        className={styles.lang}
+        className="flex items-center justify-center gap-[.625rem] cursor-pointer min-w-[12.5rem] mb-2 sm:mb-0"
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         role="button"
@@ -74,7 +72,9 @@ const LangSwitcher = () => {
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        classes={{ paper: styles.popover }}
+        PaperProps={{
+          className: 'p-2 bg-white rounded-lg shadow-lg ml-9 mt-1',
+        }}
         disableScrollLock
         anchorOrigin={{
           vertical: 'bottom',

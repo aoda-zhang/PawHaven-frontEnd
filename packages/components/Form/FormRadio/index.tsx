@@ -2,10 +2,7 @@ import clsx from 'clsx';
 import { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import formBaseStyle from '../formBase.module.css';
 import type { BaseFormType } from '../formBase.type';
-
-import style from './index.module.css';
 
 interface Option {
   value: string;
@@ -28,16 +25,12 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
   } = useFormContext();
 
   return (
-    <div
-      className={clsx(formBaseStyle.baseFormContainer, {
-        [formBaseStyle.error]: !!errors[name],
-      })}
-    >
-      <p className={formBaseStyle.label}>{label}</p>
+    <div className={clsx('baseFormContainer')}>
+      <p className="mb-3">{label}</p>
       {options.map((option) => (
         <label
           key={option.value}
-          className={style.radioLabel}
+          className="cursor-pointer flex items-center text-[1rem] mb-[.625rem]"
           htmlFor={`${name}-${option.value}`}
         >
           <input
@@ -48,15 +41,13 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
               name,
               required ? { required: 'This field is required' } : {},
             )}
-            className={clsx(style.radioInput, {
-              [style.radioError]: !!errors[name],
-            })}
+            className={clsx('mr-[.5rem]')}
           />
           {option.label}
         </label>
       ))}
       {errors[name] && (
-        <span className={formBaseStyle.errorMessage}>
+        <span className="formErrorMessage">
           {errors[name]?.message?.toString()}
         </span>
       )}

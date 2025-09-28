@@ -1,8 +1,0 @@
-@reference "../../../theme/global.css";
-.radioLabel {
-  @apply cursor-pointer flex items-center text-[1rem] mb-[.625rem];
-}
-
-.radioInput {
-  @apply mr-[.5rem];
-}
