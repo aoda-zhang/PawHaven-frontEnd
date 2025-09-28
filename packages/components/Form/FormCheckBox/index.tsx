@@ -4,7 +4,7 @@ import {
   FormHelperText,
   type CheckboxProps,
 } from '@mui/material';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -25,9 +25,7 @@ const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div
-          className={classNames([props?.className, styles.baseFormContainer])}
-        >
+        <div className={clsx([props?.className, styles.baseFormContainer])}>
           <FormControlLabel
             control={
               <Checkbox

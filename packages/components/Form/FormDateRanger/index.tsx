@@ -5,7 +5,7 @@ import {
   SingleInputDateRangeField,
   SingleInputDateRangeFieldProps,
 } from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -32,9 +32,7 @@ const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div
-          className={classNames([props?.className, styles.baseFormContainer])}
-        >
+        <div className={clsx([props?.className, styles.baseFormContainer])}>
           <div className={styles.label}>{label}</div>
           <FormControl fullWidth={fullWidth} error={!!error}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>

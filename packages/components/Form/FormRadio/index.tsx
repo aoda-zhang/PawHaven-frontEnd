@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
@@ -29,7 +29,7 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
 
   return (
     <div
-      className={classNames(formBaseStyle.baseFormContainer, {
+      className={clsx(formBaseStyle.baseFormContainer, {
         [formBaseStyle.error]: !!errors[name],
       })}
     >
@@ -48,7 +48,7 @@ const FormRadio: FC<BaseFormType & FormRadioProps> = ({
               name,
               required ? { required: 'This field is required' } : {},
             )}
-            className={classNames(style.radioInput, {
+            className={clsx(style.radioInput, {
               [style.radioError]: !!errors[name],
             })}
           />

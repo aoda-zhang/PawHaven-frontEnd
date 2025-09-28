@@ -11,11 +11,8 @@ import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import { ageOptions, animalTypeOptions, statusOptions } from './constants';
-import styles from './index.module.css';
-import { AnimalReport } from './types';
-
-import LocationSelector from '@/components/LocationSelector';
+import { ageOptions, animalTypeOptions, statusOptions } from '../constants';
+import { AnimalReport } from '../types';
 
 interface FormSectionProps {
   title: string;
@@ -23,8 +20,8 @@ interface FormSectionProps {
 }
 
 const FormSection: React.FC<FormSectionProps> = ({ title, children }) => (
-  <div className={styles.section}>
-    <h3 className={styles.sectionTitle}>{title}</h3>
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold mb-4 text-gray-800">{title}</h3>
     {children}
   </div>
 );
@@ -68,17 +65,16 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
 
   const handleSubmit = methods.handleSubmit(onSubmit);
 
-  const handleLocationChange = (location: AnimalReport['location']) => {
-    methods.setValue('location', location);
-  };
-
   // const handleImageChange = (files: File[]) => {
   //   methods.setValue('images', files);
   // };
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white rounded-lg shadow-md p-6 space-y-6"
+      >
         <FormSection title={t('reportStray.animal_basic_info')}>
           <FormRadio
             name="animalType"
@@ -92,7 +88,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             <FormInput
               name="animalTypeOther"
               placeholder={t('reportStray.enter_other_type_placeholder')}
-              className={styles.formGroup}
+              className="mb-4"
             />
           )}
 
@@ -103,7 +99,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
               ...option,
               label: t(option.label),
             }))}
-            className={styles.formGroup}
+            className="mb-4"
           />
         </FormSection>
 
@@ -112,13 +108,13 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="appearance.color"
             label={t('reportStray.color')}
             placeholder={t('reportStray.enter_color')}
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           <FormCheckbox
             name="appearance.hasInjury"
             label={t('reportStray.has_injury')}
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           {methods.watch('appearance.hasInjury') && (
@@ -126,7 +122,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
               name="appearance.injuryDescription"
               label={t('reportStray.injury_description')}
               placeholder={t('reportStray.describe_injury')}
-              className={styles.formGroup}
+              className="mb-4"
             />
           )}
 
@@ -134,21 +130,16 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="appearance.otherFeatures"
             label={t('reportStray.other_features')}
             placeholder={t('reportStray.other_features_hint')}
-            className={styles.formGroup}
+            className="mb-4"
           />
         </FormSection>
-
-        <LocationSelector
-          value={methods.watch('location')}
-          onChange={handleLocationChange}
-        />
 
         <FormSection title={t('reportStray.found_info')}>
           <FormInput
             name="foundTime"
             label={t('reportStray.found_time')}
             type="datetime-local"
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           <FormSelect
@@ -158,14 +149,14 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
               ...option,
               label: t(option.label),
             }))}
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           <FormTextArea
             name="statusDescription"
             label={t('reportStray.status_description')}
             placeholder={t('reportStray.describe_status')}
-            className={styles.formGroup}
+            className="mb-4"
           />
         </FormSection>
 
@@ -183,7 +174,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             name="contactInfo.name"
             label={t('reportStray.name')}
             placeholder={t('reportStray.enter_name')}
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           <FormInput
@@ -191,7 +182,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             label={t('reportStray.phone')}
             type="tel"
             placeholder={t('reportStray.enter_phone')}
-            className={styles.formGroup}
+            className="mb-4"
           />
 
           <FormInput
@@ -199,11 +190,11 @@ const ReportForm: React.FC<ReportFormProps> = ({ onSubmit, isSubmitting }) => {
             label={t('reportStray.email')}
             type="email"
             placeholder={t('reportStray.enter_email')}
-            className={styles.formGroup}
+            className="mb-4"
           />
         </FormSection>
 
-        <div className={styles.buttonGroup}>
+        <div className="flex justify-end gap-4 mt-8">
           <Button
             variant="outlined"
             onClick={() => window.history.back()}

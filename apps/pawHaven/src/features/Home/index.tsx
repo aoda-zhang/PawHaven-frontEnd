@@ -1,11 +1,10 @@
-import Hero from './Hero';
-import styles from './index.module.css';
-import LatestRescue from './LatestRescue';
-import RecentStory from './RecentStory';
+import Hero from './components/Hero';
+import LatestRescue from './components/LatestRescue';
+import RecentStory from './components/RecentStory';
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className="flex flex-col">
       <Hero />
       <LatestRescue />
       <RecentStory />

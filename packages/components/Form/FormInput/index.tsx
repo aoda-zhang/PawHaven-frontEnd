@@ -1,5 +1,5 @@
 import { TextField, type TextFieldProps } from '@mui/material';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -24,9 +24,7 @@ const FormInput: React.FC<
       control={control}
       defaultValue={defaultValue}
       render={({ field, fieldState: { error } }) => (
-        <div
-          className={classNames([props?.className, styles.baseFormContainer])}
-        >
+        <div className={clsx([props?.className, styles.baseFormContainer])}>
           <div className={styles.label}>{label}</div>
           <TextField
             {...field}

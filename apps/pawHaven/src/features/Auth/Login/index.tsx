@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import { useLogin } from '../apis/queries';
-import style from '../authLayout.module.css';
 
 import routePaths from '@/route/routePaths';
 
@@ -16,14 +15,14 @@ const Login: FC = () => {
   const { t } = useTranslation();
   const { mutate, isPending } = useLogin();
   return (
-    <div className={style.loginForm}>
-      <div className={style.welcomeText}>{t('auth.login')}</div>
+    <div className="flex flex-1 flex-col justify-center box-border p-6 lg:p-16 shadow-md">
+      <div className="text-2xl mb-5 text-center">{t('auth.login')}</div>
       <FormProvider {...formProps}>
         <form>
           <FormInput
             variant="outlined"
             size="small"
-            className={style.baseForm}
+            className="w-full lg:min-w-[24vw] lg:mb-2"
             label={t('auth.userName')}
             name="userName"
             required
@@ -31,7 +30,7 @@ const Login: FC = () => {
           <FormInput
             type="password"
             variant="outlined"
-            className={style.baseForm}
+            className="w-full lg:min-w-[24vw] lg:mb-2"
             size="small"
             label={t('auth.password')}
             name="password"
@@ -40,7 +39,7 @@ const Login: FC = () => {
           <Button
             disabled={isPending}
             type="submit"
-            className={style.baseForm}
+            className="w-full lg:min-w-[24vw] lg:mb-2"
             variant="contained"
             onClick={formProps.handleSubmit((data) => {
               mutate({

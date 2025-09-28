@@ -1,9 +1,7 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { Clock, CheckCircle, User } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
-import styles from '../index.module.css';
 
 import { RescueStatusType } from '@/features/Home/types';
 import getStatusColorByPrefix from '@/utils/getStatusColorByPrefix';
@@ -31,43 +29,41 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
   );
 
   return (
-    <div
-      className={`${styles.timelineContainer} bg-white rounded-lg shadow-md p-6 mt-6`}
-    >
-      <h2 className={styles.timelineTitle}>
+    <div className="w-full bg-white rounded-lg shadow-md p-6 mt-6">
+      <h2 className="text-xl font-bold mb-6 text-gray-800">
         {t('reportStray.rescue_timeline')}
       </h2>
 
       {sortedUpdates.length === 0 ? (
-        <p className={styles.emptyTimeline}>
+        <p className="text-center text-gray-500 py-8">
           {t('reportStray.no_updates_yet')}
         </p>
       ) : (
-        <div className={styles.timelineItems}>
+        <div className="relative pl-6">
           {sortedUpdates.map((update, index) => (
-            <div key={update.id} className={styles.timelineItem}>
-              <div className={styles.timelineDotContainer}>
+            <div key={update.id} className="mb-8 relative">
+              <div className="absolute left-[-1.5rem] top-3.5 flex flex-col items-center">
                 <div
-                  className={classNames([
-                    styles.timelineDot,
+                  className={clsx(
+                    'w-7 h-7 rounded-full flex items-center justify-center z-10',
                     getStatusColorByPrefix({
                       status: update?.status,
                       prefix: 'text',
                     }),
-                  ])}
+                  )}
                 >
                   <CheckCircle size={16} />
                 </div>
                 {index < sortedUpdates.length - 1 && (
-                  <div className={styles.timelineLine} />
+                  <div className="w-0.5 h-full bg-gray-200 mt-1" />
                 )}
               </div>
 
-              <div className={styles.timelineContent}>
-                <div className={styles.updateHeader}>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
                   <div className="flex items-center gap-2">
                     <span
-                      className={classNames([
+                      className={clsx([
                         'font-medium',
                         getStatusColorByPrefix({
                           status: update?.status,
@@ -79,28 +75,28 @@ const RescueTimeline: React.FC<RescueTimelineProps> = ({ updates }) => {
                     </span>
                   </div>
 
-                  <div className={styles.updateMeta}>
-                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                  <div className="flex gap-4 mt-2 sm:mt-0 text-sm">
+                    <div className="flex items-center gap-1 text-gray-500">
                       <Clock size={14} />
                       <span>{new Date(update.timestamp).toLocaleString()}</span>
                     </div>
-                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                    <div className="flex items-center gap-1 text-gray-500">
                       <User size={14} />
                       <span>{update.operator.name}</span>
                     </div>
                   </div>
                 </div>
 
-                <p className={styles.updateContent}>{update.content}</p>
+                <p className="text-gray-700 mb-4">{update.content}</p>
 
                 {update.images && update.images.length > 0 && (
-                  <div className={styles.updateImages}>
+                  <div className="flex gap-2 flex-wrap">
                     {update.images.map((img, i) => (
                       <img
                         key={img}
                         src={img}
                         alt={`Update ${i + 1}`}
-                        className={styles.updateImage}
+                        className="w-24 h-24 object-cover rounded-md"
                       />
                     ))}
                   </div>

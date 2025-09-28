@@ -3,8 +3,6 @@ import { MapPin, Calendar, Info } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import styles from '../index.module.css';
-
 import { AnimalDetail } from '@/types/AnimalType';
 
 const AnimalBasicInfo: React.FC<{ animal: AnimalDetail }> = ({ animal }) => {
@@ -15,38 +13,40 @@ const AnimalBasicInfo: React.FC<{ animal: AnimalDetail }> = ({ animal }) => {
   };
 
   return (
-    <div className={styles.basicInfoContainer}>
-      <div className={styles.infoContent}>
-        <h1 className={styles.animalName}>{animal?.name}</h1>
+    <div className="w-full bg-white rounded-lg shadow-md">
+      <div className="p-6">
+        <h1 className="text-2xl font-bold text-primary mb-4">{animal?.name}</h1>
 
-        <div className={styles.infoGrid}>
-          <div className={styles.infoItem}>
-            <MapPin size={16} className={styles.infoIcon} />
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="flex items-center gap-2 text-gray-700">
+            <MapPin size={16} className="text-primary" />
             <span>{animal?.location.address}</span>
           </div>
 
-          <div className={styles.infoItem}>
-            <Calendar size={16} className={styles.infoIcon} />
+          <div className="flex items-center gap-2 text-gray-700">
+            <Calendar size={16} className="text-primary" />
             <span>{formatDate(animal?.foundTime)}</span>
           </div>
 
-          <div className={styles.infoItem}>
-            <Info size={16} className={styles.infoIcon} />
+          <div className="flex items-center gap-2 text-gray-700">
+            <Info size={16} className="text-primary" />
             <span>{t(`reportStray.${animal?.animalType}`)}</span>
           </div>
 
-          <div className={styles.infoItem}>
-            <Info size={16} className={styles.infoIcon} />
+          <div className="flex items-center gap-2 text-gray-700">
+            <Info size={16} className="text-primary" />
             <span>{t(`reportStray.${animal?.age}`)}</span>
           </div>
         </div>
 
-        <div className={styles.descriptionSection}>
-          <h3 className={styles.sectionTitle}>{t('reportStray.appearance')}</h3>
-          <p className={styles.description}>{animal?.statusDescription}</p>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold mb-2 text-gray-800">
+            {t('reportStray.appearance')}
+          </h3>
+          <p className="text-gray-600 mb-4">{animal?.statusDescription}</p>
 
           {animal?.appearance.hasInjury && (
-            <div className={styles.injuryInfo}>
+            <div className="p-3 bg-red-50 border border-red-100 rounded-md text-red-700">
               <span className="text-red-500">
                 {t('reportStray.has_injury')}
               </span>

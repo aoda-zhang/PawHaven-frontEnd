@@ -106,9 +106,9 @@ importers:
       axios:
         specifier: ^1.12.2
         version: 1.12.2
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
@@ -130,9 +130,6 @@ importers:
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@19.1.1)
-      prop-types:
-        specifier: ^15.8.1
-        version: 15.8.1
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -227,9 +224,9 @@ importers:
       axios:
         specifier: ^1.12.2
         version: 1.12.2
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
@@ -251,9 +248,6 @@ importers:
       or:
         specifier: ^0.2.0
         version: 0.2.0
-      prop-types:
-        specifier: ^15.8.1
-        version: 15.8.1
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -2290,12 +2284,6 @@ packages:
         integrity: sha512-l+2bNRMiQgcfILUi33labAZYIWlH1kWDp+ecNo5iisRKrbm0xcRyCww71/YU0Fkw0mAFpz9bJayXPjey6vkmaQ==,
       }
     engines: { node: '>=8' }
-
-  classnames@2.5.1:
-    resolution:
-      {
-        integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==,
-      }
 
   cli-cursor@5.0.0:
     resolution:
@@ -6403,8 +6391,6 @@ snapshots:
   chownr@3.0.0: {}
 
   ci-info@4.3.0: {}
-
-  classnames@2.5.1: {}
 
   cli-cursor@5.0.0:
     dependencies:

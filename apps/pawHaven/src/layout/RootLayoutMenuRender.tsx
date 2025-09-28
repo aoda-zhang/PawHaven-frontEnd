@@ -1,5 +1,5 @@
 import LangSwitcher from '@shared/components/LangSwitcher';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { cloneElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavigateFunction } from 'react-router-dom';
@@ -66,7 +66,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
       }
       return (
         <div
-          className={classNames(itemClassNames)}
+          className={clsx(itemClassNames)}
           key={item.label}
           role="button"
           tabIndex={0}
@@ -96,7 +96,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
         ];
       return (
         <div
-          className={classNames(itemClassNames)}
+          className={clsx(itemClassNames)}
           key={item?.label}
           role="button"
           tabIndex={0}

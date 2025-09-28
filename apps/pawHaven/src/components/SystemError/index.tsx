@@ -1,5 +1,4 @@
 import Button from '@mui/material/Button';
-import systemError from '@shared/assets/images/500.png';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ const SystemError = () => {
   return (
     <div className="flex flex-col items-center gap-2 justify-center text-lg my-8">
       <img
-        src={systemError}
+        src="/images/500.png"
         alt="System error"
         className="max-w-1/4 h-auto mb-10"
       />

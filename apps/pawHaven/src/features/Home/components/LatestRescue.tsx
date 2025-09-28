@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -48,7 +48,7 @@ const RescueItem = ({
       </p>
       <p className="text-text-secondary">{description}</p>
       <div
-        className={classNames([
+        className={clsx([
           'rounded-full text-center text-white py-2',
           getStatusColorByPrefix({ status, prefix: 'bg' }),
         ])}

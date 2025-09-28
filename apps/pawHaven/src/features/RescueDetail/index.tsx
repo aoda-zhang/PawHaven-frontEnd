@@ -4,7 +4,6 @@ import { useFetchAnimalDetail } from './apis/queries';
 import AnimalBasicInfo from './components/AnimalBasicInfo';
 import RescueInteraction from './components/RescueInteraction';
 import RescueTimeline from './components/RescueTimeline';
-import styles from './index.module.css';
 import { RescueUpdate } from './types';
 
 const RescueDetailPage = () => {
@@ -65,7 +64,7 @@ const RescueDetailPage = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className="max-w-5xl mx-auto p-4 md:p-6 lg:p-8">
       {animal && <AnimalBasicInfo animal={animal} />}
 
       <RescueTimeline updates={updates} />

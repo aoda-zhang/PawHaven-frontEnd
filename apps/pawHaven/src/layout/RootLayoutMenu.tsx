@@ -1,4 +1,3 @@
-import Brand from '@shared/components/Brand';
 import useIsMobile from '@shared/hooks/useIsMobile';
 import { AlignJustify } from 'lucide-react';
 import { useState } from 'react';
@@ -7,6 +6,8 @@ import { NavigateFunction, UIMatch } from 'react-router-dom';
 import styles from './index.module.css';
 import RootLayoutMenuRender, { MenuItemType } from './RootLayoutMenuRender';
 import RootLayoutSidebar from './RootLayoutSidebar';
+
+import Brand from '@/components/Brand';
 
 interface RouterInfoType {
   data: Record<string, any> | undefined;

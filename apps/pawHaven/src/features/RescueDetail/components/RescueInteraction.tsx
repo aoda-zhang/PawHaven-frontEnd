@@ -9,8 +9,6 @@ import {
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import styles from '../index.module.css';
-
 interface RescueInteractionProps {
   animalId: string;
 }
@@ -70,34 +68,35 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
   const handleRescue = () => {};
 
   return (
-    <div
-      className={`${styles.interactionContainer} bg-white rounded-lg shadow-md p-6 mt-6`}
-    >
+    <div className="w-full bg-white rounded-lg shadow-md p-6 mt-6">
       {/* 操作按钮区 */}
-      <div className={styles.actionButtons}>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <Button
           variant="outlined"
-          className={styles.actionButton}
+          className="min-w-[180px]"
           onClick={handleRescue}
         >
           <HandHelping size={18} className="mr-2" />
           {t('pawHaven.i_will_rescue')}
         </Button>
 
-        <div className={styles.socialActions}>
+        <div className="flex gap-2">
           <button
             type="button"
-            className={styles.socialButton}
+            className="flex items-center gap-1 p-2 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             onClick={handleLike}
             aria-label={t('common.like')}
           >
-            <Heart size={20} className={isLiked ? styles.liked : ''} />
+            <Heart
+              size={20}
+              className={isLiked ? 'fill-red-500 text-red-500' : ''}
+            />
             <span>{likes}</span>
           </button>
 
           <button
             type="button"
-            className={styles.socialButton}
+            className="flex items-center gap-1 p-2 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             // onClick={handleComment}
             aria-label={t('common.comment')}
           >
@@ -107,7 +106,7 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
 
           <button
             type="button"
-            className={styles.socialButton}
+            className="flex items-center gap-1 p-2 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             onClick={handleShare}
             aria-label={t('common.share')}
           >
@@ -116,57 +115,62 @@ const RescueInteraction: React.FC<RescueInteractionProps> = () => {
 
           <button
             type="button"
-            className={styles.socialButton}
+            className="flex items-center gap-1 p-2 border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
             onClick={handleBookmark}
             aria-label={t('common.bookmark')}
           >
             <Bookmark
               size={20}
-              className={isBookmarked ? styles.bookmarked : ''}
+              className={isBookmarked ? 'fill-red-500 text-red-500' : ''}
             />
           </button>
         </div>
       </div>
 
-      <div className={styles.commentsSection}>
-        <h3 className={styles.commentsTitle}>{t('reportStray.comments')}</h3>
+      <div className="mt-8">
+        <h3 className="text-xl font-bold mb-4 text-gray-800">
+          {t('reportStray.comments')}
+        </h3>
 
-        <div className={styles.commentInputContainer}>
+        <div className="flex flex-col gap-3 mb-6">
           <TextareaAutosize
             value={commentContent}
             onChange={(e) => setCommentContent(e.target.value)}
             placeholder={t('reportStray.leave_comment_placeholder')}
-            className={styles.commentInput}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
             minRows={3}
           />
           <Button
             variant="contained"
             disabled={!commentContent.trim()}
-            className={styles.submitComment}
+            className="self-end"
           >
             {t('reportStray.submit')}
           </Button>
         </div>
 
-        <div className={styles.commentsList}>
+        <div className="space-y-4">
           {comments.map((comment) => (
-            <div key={comment.id} className={styles.commentItem}>
+            <div key={comment.id} className="flex gap-3">
               <img
                 src={comment.avatar}
                 alt={comment.userName}
-                className={styles.commentAvatar}
+                className="w-10 h-10 rounded-full object-cover"
               />
-              <div className={styles.commentContent}>
-                <div className={styles.commentHeader}>
-                  <span className={styles.commentAuthor}>
+              <div className="flex-1">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-medium text-gray-800">
                     {comment.userName}
                   </span>
-                  <span className={styles.commentTime}>
+                  <span className="text-sm text-gray-500">
                     {new Date(comment.timestamp).toLocaleString()}
                   </span>
                 </div>
-                <p className={styles.commentText}>{comment.content}</p>
-                <button type="button" className={styles.commentLike}>
+                <p className="text-gray-700 mb-2">{comment.content}</p>
+                <button
+                  type="button"
+                  className="text-sm text-gray-500 flex items-center gap-1"
+                >
                   <Heart size={16} />
                   <span>{comment.likes}</span>
                 </button>

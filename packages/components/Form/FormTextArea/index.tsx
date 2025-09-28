@@ -4,7 +4,7 @@ import {
   TextareaAutosize,
   type TextareaAutosizeProps,
 } from '@mui/material';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -32,7 +32,7 @@ const FormTextArea: React.FC<BaseFormType & TextareaAutosizeProps> = ({
         fieldState: { error },
       }) => (
         <FormControl
-          className={classNames([props?.className, styles.baseFormContainer])}
+          className={clsx([props?.className, styles.baseFormContainer])}
           error={!!error}
           fullWidth={fullWidth}
         >
