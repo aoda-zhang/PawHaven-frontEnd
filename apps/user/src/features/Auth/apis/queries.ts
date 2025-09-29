@@ -3,8 +3,9 @@ import storage from '@shared/utils/storage';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 
-import * as AuthAPI from '../apis/requests';
 import { AuthFieldType, LoginInfo } from '../types';
+
+import * as AuthAPI from './requests';
 
 import { setUserInfo } from '@/store/globalReducer';
 

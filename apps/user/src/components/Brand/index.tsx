@@ -23,7 +23,7 @@ const Brand = ({ navigate }: { navigate: NavigateFunction }) => {
       <img
         src="/images/logo.png"
         alt={t('common.slogan')}
-        className="w-38 lg:w-44 h-auto"
+        className="w-38 lg:w-46 h-auto"
       />
     </div>
   );
