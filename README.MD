@@ -1,6 +1,5 @@
 [English](README.MD) | [中文](READMECN.MD)
 
-# PawHaven
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232a?logo=react&logoColor=61dafb)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
