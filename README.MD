@@ -7,7 +7,7 @@
 ![pnpm](https://img.shields.io/badge/Package-pnpm-F69220?logo=pnpm&logoColor=white)
 ![License](https://img.shields.io/github/license/aoda-zhang/fullStack-frontEnd)
 
-[![logo.png](https://i.postimg.cc/wBfGBBYS/logo.png)](https://postimg.cc/XZ58H4J8)
+[![logo.png](https://i.postimg.cc/LsXMF4rf/Adobe-Express-file.png)](https://postimg.cc/rDvHSTyF)
 
 ## ✨ What is this?
 
