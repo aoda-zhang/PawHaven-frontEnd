@@ -6,10 +6,9 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
-import styles from './index.module.css';
 import RootLayoutFooter from './RootLayoutFooter';
 import RootLayoutMenu from './RootLayoutMenu';
-import { MenuItemType } from './RootLayoutMenuRender';
+import { MenuItemType } from './types';
 
 import { GlobalStateType, useGlobalState } from '@/store/globalReducer';
 
@@ -24,14 +23,14 @@ const RootLayout = () => {
   const navigate = useNavigate();
   const routerMatches = useMatches();
   return (
-    <div className={styles.layout}>
+    <div className="flex flex-col box-border h-full min-h-dvh">
       <RootLayoutMenu
         menuItems={globalMenuItems}
         navigate={navigate}
         routerMatches={routerMatches}
       />
-      <div className={styles.main}>
-        <div className={styles.content}>
+      <div className="flex-1 flex flex-col">
+        <div className="flex-1">
           <Outlet />
         </div>
         <RootLayoutFooter />

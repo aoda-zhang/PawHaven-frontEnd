@@ -1,30 +1,12 @@
 import useIsMobile from '@shared/hooks/useIsMobile';
 import { AlignJustify } from 'lucide-react';
 import { useState } from 'react';
-import { NavigateFunction, UIMatch } from 'react-router-dom';
 
-import styles from './index.module.css';
-import RootLayoutMenuRender, { MenuItemType } from './RootLayoutMenuRender';
+import RootLayoutMenuRender from './RootLayoutMenuRender';
 import RootLayoutSidebar from './RootLayoutSidebar';
+import { RootLayoutHeaderProps, RouterInfoType } from './types';
 
 import Brand from '@/components/Brand';
-
-interface RouterInfoType {
-  data: Record<string, any> | undefined;
-  handle: {
-    isMenuAvailable: boolean;
-    requireUserLogin: boolean;
-  };
-  id: string;
-  params: Record<string, any> | undefined;
-  pathname: string;
-}
-
-export interface RootLayoutHeaderProps {
-  menuItems: MenuItemType[];
-  navigate: NavigateFunction;
-  routerMatches?: UIMatch<unknown, unknown>[];
-}
 
 const RootLayoutMenu = ({
   menuItems,
@@ -44,7 +26,7 @@ const RootLayoutMenu = ({
   if (!isMenuAvailable) return null;
 
   return (
-    <header className={styles.header}>
+    <header className="flex items-center gap-4 box-border sticky top-0 p-[.625rem] z-50 border-border border-b-1 px-6 py-4 bg-white">
       <Brand navigate={navigate} />
       {!isMobile && (
         <RootLayoutMenuRender
@@ -55,7 +37,7 @@ const RootLayoutMenu = ({
       )}
 
       {/* Open Side bar Icon */}
-      {isMobile && <AlignJustify size={36} onClick={onOpenSidebar} />}
+      {isMobile && <AlignJustify size={34} onClick={onOpenSidebar} />}
       {/* Side bar */}
       <RootLayoutSidebar
         menuItems={menuItems}

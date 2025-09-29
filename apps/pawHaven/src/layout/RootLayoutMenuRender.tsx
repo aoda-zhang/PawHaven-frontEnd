@@ -2,36 +2,21 @@ import LangSwitcher from '@shared/components/LangSwitcher';
 import clsx from 'clsx';
 import { cloneElement } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavigateFunction } from 'react-router-dom';
 
-import styles from './index.module.css';
+import { MenuItemType, MenuRenderType, MenuType } from './types';
 
 const HeaderActionKeys = {
   openSidebarMenu: 'openSidebarMenu',
   toggleDark: 'toggleDark',
 };
-enum MenuType {
-  link = 'link',
-  component = 'component',
-}
 
-export interface MenuItemType {
-  label: string;
-  to?: string;
-  classNames?: string[];
-  isAvailableOnMobile?: boolean;
-  isOnlyMobile?: boolean;
-  component?: any;
-  action?: string; // Explicitly type the action property
-  props?: Record<string, any>;
-  type: MenuType;
-}
-
-export interface MenuRenderType {
-  menuItems: MenuItemType[];
-  activePath?: string;
-  navigate: NavigateFunction;
-}
+const rootLayoutClassNames = {
+  menuItem:
+    'cursor-pointer flex justify-center items-center p-sm border-b border-border md:border-none hover:text-primary',
+  activeMenuItem: 'block text-primary',
+  login:
+    'px-3 py-2 rounded-sm bg-primary text-white m-4 lg:m-0 flex justify-center items-center cursor-pointer',
+};
 const RootLayoutMenuRender = (props: MenuRenderType) => {
   const HeaderComponentMappings = {
     LangSwitcher: <LangSwitcher />,
@@ -58,11 +43,17 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
     if (item?.to) {
       const isActiveMenuItem =
         item.type === MenuType.link && activePath === item?.to;
-      let itemClassNames =
-        item?.classNames?.map((name) => styles?.[name]) ?? [];
+      let itemClassNames = [
+        rootLayoutClassNames[
+          item?.classNames as unknown as keyof typeof rootLayoutClassNames
+        ] ?? '',
+      ];
       if (isActiveMenuItem) {
         // Active the current menu
-        itemClassNames = [...itemClassNames, styles.activeMenu];
+        itemClassNames = [
+          ...itemClassNames,
+          rootLayoutClassNames.activeMenuItem,
+        ];
       }
       return (
         <div
@@ -89,7 +80,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
 
   const handleComponentMenu = (item: MenuItemType) => {
     if (item?.component) {
-      const itemClassNames = item?.classNames?.map((name) => styles?.[name]);
+      const itemClassNames = item?.classNames ?? [];
       const Component =
         HeaderComponentMappings[
           item.component as keyof typeof HeaderComponentMappings

@@ -28,6 +28,7 @@ export default defineConfig({
   },
   plugins: [
     react({
+      // Enable react19 features
       babel: {
         plugins: [['babel-plugin-react-compiler', { target: '19' }]],
       },

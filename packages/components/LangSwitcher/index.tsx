@@ -36,6 +36,10 @@ const LangSwitcher = () => {
   const { i18n, t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -45,10 +49,6 @@ const LangSwitcher = () => {
       event.preventDefault();
       setAnchorEl(event.currentTarget);
     }
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
   };
 
   const open = Boolean(anchorEl);

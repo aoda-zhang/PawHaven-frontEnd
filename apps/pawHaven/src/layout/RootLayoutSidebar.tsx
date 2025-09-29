@@ -1,8 +1,8 @@
 import { Drawer } from '@mui/material';
 import { NavigateFunction } from 'react-router-dom';
 
-import styles from './index.module.css';
-import RootLayoutMenuRender, { MenuItemType } from './RootLayoutMenuRender';
+import RootLayoutMenuRender from './RootLayoutMenuRender';
+import { MenuItemType } from './types';
 
 interface RootLayoutSidebarProps {
   menuItems: MenuItemType[];
@@ -22,7 +22,7 @@ const RootLayoutSidebar = ({
       open={isSidebarOpen}
       anchor="right"
       onClose={onCloseSidebar}
-      classes={{ paper: styles.rootSidebarPaper }}
+      PaperProps={{ className: 'h-full bg-background text-text pt-7' }}
     >
       <RootLayoutMenuRender menuItems={menuItems} navigate={navigate} />
     </Drawer>
