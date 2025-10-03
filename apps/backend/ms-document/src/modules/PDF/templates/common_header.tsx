@@ -38,4 +38,4 @@ const CommonHeader = ({ logoUrl, title, slogan }: CommonHeaderProps) => {
   );
 };
 
-export default CommonHeader;
+export  CommonHeader;

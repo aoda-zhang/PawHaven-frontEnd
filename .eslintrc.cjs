@@ -82,6 +82,22 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['apps/frontend/**/*.{ts,tsx,js,jsx}'],
+      rules: {
+        'import/prefer-default-export': 'warn',
+      },
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    {
+      files: ['apps/backend/**/*.{ts,js}'],
+      rules: {
+        'import/prefer-default-export': 'off',
+        'no-useless-constructor': 'off',
+      },
+    },
+  ],
   settings: {
     react: {
       version: 'detect',

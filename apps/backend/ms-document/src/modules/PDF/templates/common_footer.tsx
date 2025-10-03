@@ -19,4 +19,4 @@ const CommonFooter = () => {
   );
 };
 
-export default CommonFooter;
+export  CommonFooter;

@@ -1,4 +1,4 @@
-import storageKeys from '@shared/constants/storageKeys';
+import storageKeys from '@/constants/StorageKeys';
 import storageTool from '@shared/utils/storage';
 import { ReactElement, useEffect, useState } from 'react';
 import { useMatches, useNavigate } from 'react-router-dom';

@@ -1,26 +1,12 @@
 {
+  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": false,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ESNext",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "types": [],
-    "incremental": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
     "jsx": "react-jsx",
     "baseUrl": "",
     "outDir": "build",
     "paths": {
-      "@shared/*": ["src/shared/*"],
-      "@modules/*": ["src/modules/*"],
-      "@i18n/*": ["src/i18n/*"]
+      "@shared/*": ["../../../packages/shared-backend/*"],
+      "@modules/*": ["src/modules/*"]
     }
   },
   "include": ["src"]

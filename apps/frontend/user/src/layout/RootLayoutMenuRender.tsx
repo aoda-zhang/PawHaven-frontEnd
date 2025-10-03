@@ -1,4 +1,4 @@
-import LangSwitcher from '@shared/components/LangSwitcher';
+import LangSwitcher from '@/components/LangSwitcher';
 import clsx from 'clsx';
 import { cloneElement } from 'react';
 import { useTranslation } from 'react-i18next';

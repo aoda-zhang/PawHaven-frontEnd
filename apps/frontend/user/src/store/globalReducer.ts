@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import LocaleKeys from '@shared/constants/localeKey';
-import storageKeys from '@shared/constants/storageKeys';
+import storageKeys from '@/constants/StorageKeys';
 import storageTool from '@shared/utils/storage';
 
 import { useReduxSelector } from '../hooks/reduxHooks';

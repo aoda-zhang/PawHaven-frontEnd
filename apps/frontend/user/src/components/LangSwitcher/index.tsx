@@ -1,10 +1,10 @@
 import { Popover } from '@mui/material';
+import storageTool from '@shared/utils/storage';
 import { ChevronDown, Globe } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import StorageKeys from '../../constants/storageKeys';
-import storageTool from '../../utils/storage';
+import StorageKeys from '@/constants/StorageKeys';
 
 const LanguageSelect = () => {
   const { i18n, t } = useTranslation();

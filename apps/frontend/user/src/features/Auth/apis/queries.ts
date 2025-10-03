@@ -1,4 +1,4 @@
-import storageKeys from '@shared/constants/storageKeys';
+import storageKeys from '@/constants/StorageKeys';
 import storage from '@shared/utils/storage';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';

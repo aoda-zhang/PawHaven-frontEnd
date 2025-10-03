@@ -1,9 +1,7 @@
-const AuthDBCollections = {
-    PERMISSION: 'Permissions',
-    USER: 'Users',
-    ROLE: 'Roles',
-    RESOURCE: 'Resources',
-    ROLE_PERMISSON: 'RolePermission'
-}
-
-export default AuthDBCollections
+export const AuthDBCollections = {
+  PERMISSION: 'Permissions',
+  USER: 'Users',
+  ROLE: 'Roles',
+  RESOURCE: 'Resources',
+  ROLE_PERMISSON: 'RolePermission',
+};

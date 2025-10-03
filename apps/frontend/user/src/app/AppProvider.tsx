@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import envConfig from '../config';
+// Enable i18n for the entire app
 import '@shared/i18n';
 import { store, persistor } from '../store/reduxStore';
 

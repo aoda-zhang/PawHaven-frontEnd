@@ -561,7 +561,7 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
 
-  apps/backend/ms-trip:
+  apps/backend/ms-pawhaven:
     dependencies:
       '@nestjs/axios':
         specifier: ^4.0.0

@@ -1,7 +1,7 @@
 import { Prop } from '@nestjs/mongoose';
 import { Document, type Schema } from 'mongoose';
 
-export default class CommonSchema extends Document {
+export class CommonSchema extends Document {
   // 显示声明
   declare _id: Schema.Types.ObjectId;
 

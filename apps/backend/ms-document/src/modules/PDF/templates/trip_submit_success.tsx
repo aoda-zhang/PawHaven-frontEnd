@@ -1,5 +1,6 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
+
 const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
