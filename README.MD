@@ -57,7 +57,7 @@ Together, let's create a safe haven for every paw in need.
 
 ## 🔗 Links
 
-- GitHub repo: https://github.com/aoda-zhang/PawHaven-frontEnd
+- GitHub repo: https://github.com/aoda-zhang/PawHaven
 - Contact:
   - Email: aodazhang666@gmail.com
   - Linkedin: https://www.linkedin.com/in/aodazhang
