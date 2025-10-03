@@ -2,3 +2,13 @@ packages:
   - apps/frontend/*
   - apps/backend/*
   - packages/*
+
+onlyBuiltDependencies:
+  - '@mui/x-telemetry'
+  - '@nestjs/core'
+  - '@scarf/scarf'
+  - '@tailwindcss/oxide'
+  - bcrypt
+  - esbuild
+  - puppeteer
+  - unrs-resolver
