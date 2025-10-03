@@ -28,7 +28,7 @@ PawHaven is a full-stack project built with React and Node.js (NestJS). It provi
 
 - **Frontend:** React, Redux, TypeScript, Tailwind CSS, React Hook Form
 - **Backend:** NestJS, Node.js, REST & RPC APIs
-- **Database:** PostgreSQL (or your preferred SQL database)
+- **Database:** MongoDB
 - **Authentication:** JWT-based auth with role management
 - **Deployment:** Kubernetes, Docker, GitHub Actions CI/CD
 
