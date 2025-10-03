@@ -36,25 +36,6 @@ By contributing, you get hands-on experience with this cutting-edge tech stack, 
 
 ---
 
-## 🤝 Join Our Caring Community
-
-Are you passionate about animals and technology? Join us! PawHaven is an open invitation to developers, designers, animal lovers, and anyone who believes in building technology with warmth and purpose.
-
-Your contributions — whether in code, design, testing, or spreading the word — make this project stronger and the world kinder.
-
-Together, let's create a safe haven for every paw in need.
-
----
-
-## 📩 How to Contribute
-
-1. **Fork the repository** and create your feature branch.
-2. **Submit pull requests** with clear descriptions of your improvements.
-3. **Report issues** or suggest features via GitHub Issues.
-4. Spread the word and invite friends to contribute too!
-
----
-
 ## 🔗 Links
 
 - GitHub repo: https://github.com/aoda-zhang/PawHaven
