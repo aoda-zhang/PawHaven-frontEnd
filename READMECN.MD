@@ -55,7 +55,7 @@ PawHaven 是一个基于 React 和 Node.js（NestJS） 的全栈项目。通过�
 
 ## 🔗 相关链接
 
-- GitHub 仓库：https://github.com/aoda-zhang/PawHaven-frontEnd
+- GitHub 仓库：https://github.com/aoda-zhang/PawHaven
 - 联系方式：请在 GitHub 上提交 issue 或 pull request。
 
 ---
