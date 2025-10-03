@@ -1,5 +1,5 @@
 {
-  "name": "pawHaven",
+  "name": "pawHaven-user",
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",
@@ -48,7 +48,7 @@
     "zod": "^4.1.11"
   },
   "scripts": {
-    "dev": "vite --mode dev --port 3002",
+    "dev": "vite --mode dev --port 6001",
     "uat": "vite --mode uat",
     "build:prod": "tsc && vite build --mode prod",
     "build:uat": "tsc && vite build --mode uat",

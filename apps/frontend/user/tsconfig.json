@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["../../../packages/shared-frontend/*"]
+    },
+    "outDir": "build",
+    "types": ["node", "vite/client", "@modyfi/vite-plugin-yaml/modules"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "src/**/*.spec.ts", "tailwind.config.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
