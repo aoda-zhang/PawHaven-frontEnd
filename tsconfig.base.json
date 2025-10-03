@@ -1,19 +1,29 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "target": "esnext", // Output JavaScript syntax target: latest ES
+    "module": "esnext", // Use ESNext module system (works well with bundlers)
+    "lib": ["esnext"], // Include the latest ES standard library
+    "allowJs": true, // Allow compiling JavaScript files
+    "skipLibCheck": true, // Skip type checking for declaration files for faster builds
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES modules
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules without a default export
+    "strict": true, // Enable strict mode
+    "strictNullChecks": true, // Enforce null/undefined checks
+    "noImplicitAny": true, // Disallow implicit any types
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough cases in switch statements
+    "noUnusedLocals": true, // Report unused local variables
+    "noUnusedParameters": true, // Report unused function parameters
+    "noImplicitReturns": true, // Require explicit return values in functions
+    "moduleResolution": "bundler", // Use bundler-style module resolution (Vite/webpack)
+    "resolveJsonModule": true, // Allow importing JSON modules
+    "isolatedModules": true, // Ensure each file can be compiled in isolation (Babel/TSX safe)
+    "noEmit": true, // Do not emit compiled JavaScript, only type-check
+    "baseUrl": ".", // Base URL for module resolution
+    "paths": {
+      // Path aliases (monorepo shared packages)
+      "@shared-frontend/*": ["/packages/shared-frontend/*"],
+      "@shared-backend/*": ["/packages/shared-backend/*"]
+    }
   }
 }

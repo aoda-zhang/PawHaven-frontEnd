@@ -3,6 +3,9 @@
   "compilerOptions": {
     "baseUrl": "",
     "outDir": "build",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@shared/*": ["../../../packages/shared-backend/*"],
       "@modules/*": ["src/modules/*"]
