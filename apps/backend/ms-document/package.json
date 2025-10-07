@@ -45,7 +45,7 @@
     "i18n": "^0.15.1",
     "js-yaml": "^4.1.0",
     "mongoose": "^8.14.0",
-    "nodemailer": "^6.10.1",
+    "nodemailer": "^7.0.7",
     "puppeteer": "^24.7.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
