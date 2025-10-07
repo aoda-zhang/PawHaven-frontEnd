@@ -40,10 +40,10 @@ export class SignGuard implements CanActivate {
     private configService: ConfigService,
   ) {
     this.privateKey = this.configService.get<string>('auth.privateKey') ?? '';
-    this.requestGap = this.configService.get<number>('auth.requestGap');
+    this.requestGap = this.configService.get<number>('auth.requestGap') ?? 300; // default 5 minutes
   }
 
-  isTimestampAvailable = (clientTimestamp): boolean => {
+  isTimestampAvailable = (clientTimestamp: number): boolean => {
     const serverUTCTimestamp = Math.floor(Date.now() / 1000);
     // Check the timestamp is valid to prevent request replay attack
     const isPassed =

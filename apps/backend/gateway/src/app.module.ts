@@ -1,7 +1,6 @@
 import path from 'node:path';
 
 import { AuthModule } from '@modules/Auth/auth.module';
-import { TripModule } from '@modules/Trip/trip.module';
 import { Module } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
 import SharedModule from '@shared/shared.module';
@@ -25,7 +24,6 @@ const configFilePath = path.resolve(
       isIntergrateHttpInterceptor: true,
     }),
     JwtModule,
-    TripModule,
     DocumentModule,
     AuthModule,
   ],

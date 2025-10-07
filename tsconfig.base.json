@@ -19,11 +19,6 @@
     "resolveJsonModule": true, // Allow importing JSON modules
     "isolatedModules": true, // Ensure each file can be compiled in isolation (Babel/TSX safe)
     "noEmit": true, // Do not emit compiled JavaScript, only type-check
-    "baseUrl": ".", // Base URL for module resolution
-    "paths": {
-      // Path aliases (monorepo shared packages)
-      "@shared-frontend/*": ["/packages/shared-frontend/*"],
-      "@shared-backend/*": ["/packages/shared-backend/*"]
-    }
+    "baseUrl": "." // Base URL for module resolution
   }
 }
