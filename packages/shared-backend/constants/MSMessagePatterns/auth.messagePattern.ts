@@ -1,4 +1,4 @@
-import { MicroServiceNames, Versions } from '../constant'
+import { MicroServiceNames, Versions } from '../constant';
 
 /*
 // Please define the message pattern by the following format:
@@ -9,8 +9,8 @@ import { MicroServiceNames, Versions } from '../constant'
     GET_TRIP_LIST: `${MicroServiceNames.TRIP}.getTripList.${Versions.v1}`
 */
 const AuthMessagePattern = {
-    REGISTER: `${MicroServiceNames.AUTH}.register.${Versions.v1}`,
-    LOGIN: `${MicroServiceNames.AUTH}.login.${Versions.v1}`,
-    REFRESH: `${MicroServiceNames.AUTH}.refresh.${Versions.v1}`
-}
-export default AuthMessagePattern
+  REGISTER: `${MicroServiceNames.AUTH}.register.${Versions.v1}`,
+  LOGIN: `${MicroServiceNames.AUTH}.login.${Versions.v1}`,
+  REFRESH: `${MicroServiceNames.AUTH}.refresh.${Versions.v1}`,
+};
+export default AuthMessagePattern;

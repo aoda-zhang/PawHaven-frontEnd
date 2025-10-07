@@ -12,66 +12,79 @@ import {
   HttpBusinessMappingCode,
   HttpReqHeader,
 } from '@shared/core/httpClient/interface';
-import trime from '@shared/utils/trime';
 import CryptoJS from 'crypto-js';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import trim from '@shared/utils/trim';
 
 dayjs.extend(utc);
 
 export type SignParams = {
   request: Record<string, any>;
-  clientTimestamp: string;
+  clientTimestamp: number;
 };
+
 export type CompareSignParams = SignParams & {
   clientSign: string;
 };
 
-// Please use the decorator @NoSign() to skip the sign validation
-
+/**
+ * SignGuard
+ * Validates request timestamp and HMAC signature
+ * Use @NoSign() decorator to skip validation for certain routes
+ */
 @Injectable()
 export class SignGuard implements CanActivate {
-  private privateKey: string;
+  private readonly privateKey: string;
 
-  private requestGap: number;
+  private readonly requestGap: number;
 
   constructor(
-    private reflector: Reflector,
-    private configService: ConfigService,
+    private readonly reflector: Reflector,
+    private readonly configService: ConfigService,
   ) {
     this.privateKey = this.configService.get<string>('auth.privateKey') ?? '';
     this.requestGap = this.configService.get<number>('auth.requestGap') ?? 300; // default 5 minutes
   }
 
-  isTimestampAvailable = (clientTimestamp: number): boolean => {
+  /**
+   * Check if the client timestamp is within the allowed gap
+   */
+  private isTimestampAvailable = (clientTimestamp: number): boolean => {
     const serverUTCTimestamp = Math.floor(Date.now() / 1000);
-    // Check the timestamp is valid to prevent request replay attack
-    const isPassed =
+    return (
       serverUTCTimestamp > 0 &&
       clientTimestamp > 0 &&
       serverUTCTimestamp >= clientTimestamp &&
-      this.requestGap >= Math.abs(serverUTCTimestamp - clientTimestamp);
-    return isPassed;
+      this.requestGap >= Math.abs(serverUTCTimestamp - clientTimestamp)
+    );
   };
 
-  private formatUrl = (url: string) => {
-    return url
-      .replace(this.configService.get<string>('http.prefix'), '')
-      .replace(/\//g, '')
-      ?.toLowerCase();
+  /**
+   * Normalize URL for signing
+   */
+  private formatUrl = (url: string): string => {
+    const prefix = this.configService.get<string>('http.prefix') ?? '';
+    return url.replace(prefix, '').replace(/\//g, '').toLowerCase();
   };
 
+  /**
+   * Generate HMAC SHA256 sign for a request
+   */
   private generateSign = ({ request, clientTimestamp }: SignParams): string => {
     const { body, url = '', method = '' } = request;
     const requestBody =
-      Object.keys(body ?? {})?.length > 0 ? JSON.stringify(request?.body) : '';
+      body && Object.keys(body).length > 0 ? JSON.stringify(body) : '';
     return CryptoJS.HmacSHA256(
       `${this.formatUrl(url)}>${requestBody}+${method?.toUpperCase()}|${clientTimestamp}`,
       this.privateKey,
     ).toString(CryptoJS.enc.Hex);
   };
 
-  compareSign = ({
+  /**
+   * Compare client sign with server-generated sign
+   */
+  private compareSign = ({
     clientSign,
     request,
     clientTimestamp,
@@ -79,41 +92,54 @@ export class SignGuard implements CanActivate {
     return clientSign === this.generateSign({ request, clientTimestamp });
   };
 
+  /**
+   * Main guard logic
+   */
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const response = context.switchToHttp().getResponse();
+
     const isNoSignReq = this.reflector.getAllAndOverride<boolean>(
       Decorators.noSign,
       [context.getHandler(), context.getClass()],
     );
 
     try {
-      // skip verify Sign if isNoSignReq route or NO enable Sign
+      // Skip sign validation if disabled or decorated with @NoSign
       if (!this.configService.get('auth.enableSign') || isNoSignReq) {
         return true;
       }
-      const clientTimestamp = `${request?.headers?.[HttpReqHeader?.timestamp] ?? ''}`;
+
+      // Retrieve headers
+      const clientTimestampHeader =
+        request?.headers?.[HttpReqHeader?.timestamp];
       const clientSign = request?.headers?.[HttpReqHeader?.sign];
 
-      // verify the timestamp is valid
-      const isTimestampAvailable = this.isTimestampAvailable(clientTimestamp);
+      // Validate timestamp header
+      const clientTimestamp = Number(clientTimestampHeader);
+      if (!clientTimestamp || isNaN(clientTimestamp)) {
+        throw new BadRequestException('Invalid timestamp header');
+      }
 
-      // verify the sign between client and server
-      const isPassedSign = this.compareSign({
+      // Validate timestamp and sign
+      const isTimestampValid = this.isTimestampAvailable(clientTimestamp);
+      const isSignValid = this.compareSign({
         request,
         clientTimestamp,
         clientSign,
       });
-      return isTimestampAvailable && isPassedSign;
+
+      return isTimestampValid && isSignValid;
     } catch (error) {
-      switch (trime(error?.message)) {
-        case HttpBusinessCode.jwtexpired || HttpBusinessCode.invalidToken:
+      switch (trim(error?.message)) {
+        case HttpBusinessCode.jwtexpired:
+        case HttpBusinessCode.invalidToken:
           response.data = HttpBusinessMappingCode.jwtexpired;
           break;
         default:
           break;
       }
-      throw new BadRequestException(`error:${error}`);
+      throw new BadRequestException(`error: ${error}`);
     }
   }
 }

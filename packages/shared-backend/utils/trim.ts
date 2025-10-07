@@ -1,3 +1,3 @@
 export default function time(str: string) {
-    return str.replace(/\s/g, '')
+  return str.replace(/\s/g, '');
 }

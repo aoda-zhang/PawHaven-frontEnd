@@ -14,7 +14,7 @@ const ErrorFallback = () => {
   const errorInfo = useRouteError() as Partial<ErrorInfo>;
   const isProd = useIsProd();
   if (!isProd) {
-    console.error('curre errorInfo:', JSON.stringify(errorInfo));
+    console.error('current errorInfo:', JSON.stringify(errorInfo));
   }
   switch (errorInfo?.status) {
     case 404:
