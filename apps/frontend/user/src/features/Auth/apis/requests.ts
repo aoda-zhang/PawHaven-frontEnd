@@ -1,4 +1,4 @@
-import httpService from '@shared/cores/http';
+import httpService from '@sharedFrontend/cores/http';
 
 import { AuthFieldType, LoginInfo } from '../types';
 

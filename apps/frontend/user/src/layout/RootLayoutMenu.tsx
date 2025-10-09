@@ -1,4 +1,4 @@
-import useIsMobile from '@shared/hooks/useIsMobile';
+import useIsMobile from '@sharedFrontend/hooks/useIsMobile';
 import { AlignJustify } from 'lucide-react';
 import { useState } from 'react';
 

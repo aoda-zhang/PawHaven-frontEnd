@@ -1,4 +1,4 @@
-import Loading from '@shared/components/Loading';
+import Loading from '@sharedComponents/Loading';
 import { ReactNode } from 'react';
 import {
   createBrowserRouter,

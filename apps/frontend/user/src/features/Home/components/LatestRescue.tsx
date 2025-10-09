@@ -22,7 +22,7 @@ const RescueItem = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/rescue/${animalID}`);
+    navigate(`/rescue/detail/${animalID}`);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {

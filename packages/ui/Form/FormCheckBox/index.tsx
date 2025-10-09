@@ -5,12 +5,12 @@ import {
   type CheckboxProps,
 } from '@mui/material';
 import clsx from 'clsx';
-import React from 'react';
+import { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import type { BaseFormType } from '../formBase.type';
 
-const FormCheckbox: React.FC<BaseFormType & CheckboxProps> = ({
+const FormCheckbox: FC<BaseFormType & CheckboxProps> = ({
   name,
   label,
   defaultValue = false,

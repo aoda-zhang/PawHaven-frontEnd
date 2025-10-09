@@ -6,7 +6,7 @@ import {
   FormTextArea,
   FormCheckbox,
   // FileUpload,
-} from '@shared/components/Form';
+} from '@sharedComponents/Form';
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

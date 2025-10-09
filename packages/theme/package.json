@@ -1,0 +1,16 @@
+{
+  "name": "@pawhaven/theme",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x",
+    "pnpm": ">=10"
+  },
+  "dependencies": {
+    "@mui/material": "^7.3.2",
+    "@types/node": "^24.5.2",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.17.0"
+}

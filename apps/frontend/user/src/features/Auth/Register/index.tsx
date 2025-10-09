@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import FormInput from '@shared/components/Form/FormInput';
+import FormInput from '@sharedComponents/Form/FormInput';
 import { type FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';

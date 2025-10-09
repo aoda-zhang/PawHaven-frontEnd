@@ -1,5 +1,4 @@
-import path from 'node:path';
-
+import tsconfigPaths from 'vite-tsconfig-paths';
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
@@ -27,6 +26,7 @@ export default defineConfig({
     outDir: 'build',
   },
   plugins: [
+    tsconfigPaths(),
     react({
       // Enable react19 features
       babel: {
@@ -36,12 +36,6 @@ export default defineConfig({
     ViteYaml(),
     tailwindcss(),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@shared': path.resolve(__dirname, '../../../packages/shared-frontend'),
-    },
-  },
   css: {
     modules: {
       // This is the default value, but you can customize it if needed

@@ -6,9 +6,6 @@
     "source.fixAll.eslint": "explicit"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
@@ -23,8 +20,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
@@ -35,7 +32,14 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "tailwindCSS.experimental.configFile": "packages/theme/global.css",
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescript"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }

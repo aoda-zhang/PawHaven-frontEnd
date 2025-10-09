@@ -1,4 +1,4 @@
-import http from '@shared/cores/http';
+import http from '@sharedFrontend/cores/http';
 
 import { AnimalDetail, AnimalRescueStatus } from '@/types/AnimalType';
 

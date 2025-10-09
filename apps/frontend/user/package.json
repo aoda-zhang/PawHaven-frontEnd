@@ -14,6 +14,9 @@
     "@hookform/resolvers": "^5.2.2",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
     "@mui/material": "^7.3.2",
+    "@pawhaven/i18n": "workspace:*",
+    "@pawhaven/theme": "workspace:*",
+    "@pawhaven/ui": "workspace:*",
     "@reduxjs/toolkit": "^2.9.0",
     "@tailwindcss/vite": "^4.1.13",
     "@tanstack/react-query": "^5.90.1",
@@ -48,7 +51,7 @@
     "zod": "^4.1.11"
   },
   "scripts": {
-    "dev": "vite --mode dev --port 6001",
+    "dev": "vite --mode dev --port 3006",
     "uat": "vite --mode uat",
     "build:prod": "tsc && vite build --mode prod",
     "build:uat": "tsc && vite build --mode uat",
@@ -58,7 +61,8 @@
     "@types/ramda": "^0.31.1",
     "autoprefixer": "^10.4.21",
     "babel-plugin-react-compiler": "19.1.0-rc.3",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "vite-tsconfig-paths": "6.0.0-beta.4"
   },
-  "packageManager": "pnpm@10.5.2"
+  "packageManager": "pnpm@10.17.0"
 }

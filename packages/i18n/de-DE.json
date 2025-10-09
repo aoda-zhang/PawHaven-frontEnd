@@ -6,6 +6,7 @@
     "brand": "TripSnap",
     "record": "Streunende Tiere erfassen",
     "stories": "Rettungsgeschichten",
+    "guides": "Rettungsleitfaden für Tiere",
     "required": "ist erforderlich",
     "save_continue": "Speichern & Weiter",
     "previous": "Zurück",
@@ -120,5 +121,37 @@
     "enter_other_type_placeholder": "Bitte geben Sie eine andere Tierart ein",
     "rescue_timeline": "Rettungszeitachse",
     "comments": "Kommentare"
+  },
+  "rescueGuide": {
+    "title": "Rettungsleitfaden",
+    "intro": "Lerne Schritt für Schritt, wie du herrenlosen Tieren sicher und mit Mitgefühl helfen kannst 💙",
+    "quote": "Jede freundliche Tat macht die Welt ein wenig wärmer.",
+    "steps": [
+      {
+        "icon": "🕵️‍♀️",
+        "title": "Beobachten und Einschätzen",
+        "desc": "Prüfe, ob das Tier verletzt, schwach oder gefangen ist. Wenn es ein Halsband trägt oder ruht, halte Abstand."
+      },
+      {
+        "icon": "🦺",
+        "title": "Sicherheit zuerst",
+        "desc": "Bleibe ruhig, vermeide plötzliche Bewegungen und sprich mit sanfter Stimme. Versuche nicht, das Tier zu jagen."
+      },
+      {
+        "icon": "💧",
+        "title": "Erste Hilfe leisten",
+        "desc": "Biete sauberes Wasser oder ein Handtuch an. Gib kein Futter oder Medikamente ohne Wissen."
+      },
+      {
+        "icon": "📞",
+        "title": "Professionelle Hilfe suchen",
+        "desc": "Kontaktiere Tierärzte, Tierheime oder PawHaven-Freiwillige in deiner Nähe."
+      },
+      {
+        "icon": "📸",
+        "title": "Rettung auf PawHaven teilen",
+        "desc": "Teile deine Rettungsgeschichte auf PawHaven, damit mehr Menschen helfen können."
+      }
+    ]
   }
 }

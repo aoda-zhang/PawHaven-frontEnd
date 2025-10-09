@@ -19,6 +19,12 @@ const getDefaultDynamicMenu = () => {
       type: 'link',
     },
     {
+      label: 'common.guides',
+      to: '/rescue/guides',
+      classNames: ['menuItem'],
+      type: 'link',
+    },
+    {
       label: 'auth.auth',
       to: '/auth/login',
       classNames: ['login'],
@@ -50,7 +56,11 @@ const getDynamicRouters = () => {
           element: 'report_stray',
         },
         {
-          path: '/rescue/:animalID',
+          path: '/rescue/guides',
+          element: 'rescue_guides',
+        },
+        {
+          path: '/rescue/detail/:animalID',
           element: 'rescue_detail',
           handle: { isRequireUserLogin: false },
         },

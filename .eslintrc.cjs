@@ -59,7 +59,11 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['apps/frontend/**/*.{ts,tsx,js,jsx}'],
+      files: [
+        'apps/frontend/**/*.{ts,tsx,js,jsx}',
+        'packages/shared-frontend/**/*.{ts,tsx,js,jsx}',
+        'packages/ui/**/*.{ts,tsx,js,jsx}',
+      ],
       env: {
         browser: true,
       },
@@ -93,7 +97,10 @@ module.exports = {
       },
     },
     {
-      files: ['apps/backend/**/*.{ts,js}'],
+      files: [
+        'apps/backend/**/*.{ts,js}',
+        'packages/shared-backend/**/*.{ts,js}',
+      ],
       env: {
         node: true,
       },

@@ -1,8 +1,8 @@
-import storageKeys from '@/constants/StorageKeys';
-import storageTool from '@shared/utils/storage';
+import storageTool from '@sharedFrontend/utils/storage';
 import { ReactElement, useEffect, useState } from 'react';
 import { useMatches, useNavigate } from 'react-router-dom';
 
+import storageKeys from '@/constants/StorageKeys';
 import { RouteMetaType } from '@/route/AppRouterProvider';
 import routePaths from '@/route/routePaths';
 

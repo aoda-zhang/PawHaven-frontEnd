@@ -1,6 +1,6 @@
 const TripDBCollection = {
-    DESTINATION: 'Destinations',
-    HISTORY: 'History'
-}
+  DESTINATION: 'Destinations',
+  HISTORY: 'History',
+};
 
-export default TripDBCollection
+export default TripDBCollection;

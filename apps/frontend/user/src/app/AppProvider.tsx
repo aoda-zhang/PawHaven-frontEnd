@@ -1,8 +1,7 @@
 import { ThemeProvider } from '@mui/material';
-import '@shared/theme/global.css';
-import Loading from '@shared/components/Loading';
-import getReactQueryOptions from '@shared/cores/react-query';
-import MUITheme from '@shared/theme/MUI-theme';
+import '@pawhaven/theme/global.css';
+import Loading from '@pawhaven/ui/Loading';
+import MUITheme from '@sharedTheme/MUI-theme';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { type ReactNode, Suspense, useState } from 'react';
@@ -10,10 +9,11 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Toaster } from 'react-hot-toast';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+// import getReactQueryOptions from '@sharedFrontend/cores/react-query';
 
 import envConfig from '../config';
 // Enable i18n for the entire app
-import '@shared/i18n';
+import '@pawhaven/i18n';
 import { store, persistor } from '../store/reduxStore';
 
 import GlobalInitializer from './GlobalInitializer';

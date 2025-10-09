@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 @import './common.css';
 
-@source "../components";
+@source "../ui/**/*.{js,ts,jsx,tsx}"; /* Shared components */
+@source "../../apps/frontend/**/*.{js,ts,jsx,tsx}"; /* Business app */
 
 @theme {
   /* === Core Colors (Warm & Friendly) === */

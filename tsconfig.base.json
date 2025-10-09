@@ -19,6 +19,20 @@
     "resolveJsonModule": true, // Allow importing JSON modules
     "isolatedModules": true, // Ensure each file can be compiled in isolation (Babel/TSX safe)
     "noEmit": true, // Do not emit compiled JavaScript, only type-check
-    "baseUrl": "." // Base URL for module resolution
+    "baseUrl": ".", // Base URL for module resolution
+    "paths": {
+      "@/*": ["./src/*"],
+      "@pawhaven/sharedFrontend/*": ["packages/shared-frontend/*"],
+      "@pawhaven/ui/*": ["packages/ui/*"],
+      "@pawhaven/i18n": ["packages/i18n"],
+      "@pawhaven/them/*": ["packages/theme/*"]
+    },
+    "references": [
+      { "path": "packages/ui" },
+      { "path": "packages/theme" },
+      {
+        "path": "packages/i18n"
+      }
+    ]
   }
 }

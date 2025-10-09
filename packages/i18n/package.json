@@ -1,0 +1,15 @@
+{
+  "name": "@pawhaven/i18n",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x",
+    "pnpm": ">=10"
+  },
+  "dependencies": {
+    "i18next": "^25.5.2",
+    "react-i18next": "^15.7.3",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.17.0"
+}

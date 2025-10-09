@@ -1,4 +1,4 @@
-import SuspenseWrapper from '@shared/components/SuspenseWrapper';
+import SuspenseWrapper from '@sharedComponents/SuspenseWrapper';
 import { lazy, ReactElement } from 'react';
 
 import ErrorFallback from '@/components/ErrorFallback';
@@ -9,6 +9,7 @@ import Login from '@/features/Auth/Login';
 import Register from '@/features/Auth/Register';
 import Home from '@/features/Home';
 import RootLayout from '@/layout';
+import RescueGuide from '@/features/RescueGuide';
 
 const ReportStray = lazy(() => import('@/features/ReportStray'));
 const ReportDetail = lazy(() => import('@/features/RescueDetail'));
@@ -29,6 +30,11 @@ const routerElementMapping: Record<string, ReactElement> = {
   report_stray: (
     <SuspenseWrapper>
       <ReportStray />
+    </SuspenseWrapper>
+  ),
+  rescue_guides: (
+    <SuspenseWrapper>
+      <RescueGuide />
     </SuspenseWrapper>
   ),
   rescue_detail: (

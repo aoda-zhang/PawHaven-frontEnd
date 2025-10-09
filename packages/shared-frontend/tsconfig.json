@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "baseUrl": "."
   },
   "exclude": ["node_modules", "dist", "build", "coverage", "src/**/*.spec.ts"]

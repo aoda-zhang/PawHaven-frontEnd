@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { AllRpcExceptionsFilter } from '@shared/core/httpClient/rpcExceptionFillter';
 
-import AppModule from './app.module';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const appContext = await NestFactory.createApplicationContext(AppModule);

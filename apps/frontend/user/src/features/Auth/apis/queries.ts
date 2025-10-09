@@ -1,5 +1,4 @@
-import storageKeys from '@/constants/StorageKeys';
-import storage from '@shared/utils/storage';
+import storage from '@sharedFrontend/utils/storage';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +6,7 @@ import { AuthFieldType, LoginInfo } from '../types';
 
 import * as AuthAPI from './requests';
 
+import storageKeys from '@/constants/StorageKeys';
 import { setUserInfo } from '@/store/globalReducer';
 
 export const useLogin = () => {

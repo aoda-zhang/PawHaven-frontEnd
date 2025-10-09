@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import LocaleKeys from '@shared/constants/localeKey';
-import storageKeys from '@/constants/StorageKeys';
-import storageTool from '@shared/utils/storage';
+import LocaleKeys from '@sharedFrontend/constants/localeKey';
+import storageTool from '@sharedFrontend/utils/storage';
 
 import { useReduxSelector } from '../hooks/reduxHooks';
 
 import reducerNames from './reducerNames';
 import { ReduxState } from './reduxStore';
 
+import storageKeys from '@/constants/StorageKeys';
 import type { UserInfoType } from '@/features/Auth/types';
 
 export interface GlobalStateType {
