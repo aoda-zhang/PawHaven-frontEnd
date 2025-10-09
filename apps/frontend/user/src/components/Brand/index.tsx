@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { NavigateFunction } from 'react-router-dom';
+import type { NavigateFunction } from 'react-router-dom';
 
 const Brand = ({ navigate }: { navigate: NavigateFunction }) => {
   const { t } = useTranslation();

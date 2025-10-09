@@ -1,0 +1,11 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "module": "CommonJS", // Node.js standard module system
+    "outDir": "dist", // Output directory for compiled JS (if needed)
+    "types": ["node"], // Include Node.js types
+    "noEmit": false // Allow emitting compiled JS in backend
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

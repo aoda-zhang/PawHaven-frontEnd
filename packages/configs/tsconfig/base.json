@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    // Target latest ECMAScript version
+    "target": "esnext",
+
+    // Use ESNext module system
+    "module": "esnext",
+
+    // Include the latest ES standard library
+    "lib": ["esnext"],
+
+    // Allow compiling JavaScript files alongside TypeScript
+    "allowJs": true,
+
+    // Skip type checking for declaration files for faster builds
+    "skipLibCheck": true,
+
+    // Enable interoperability between CommonJS and ES modules
+    "esModuleInterop": true,
+
+    // Allow default imports from modules without a default export
+    "allowSyntheticDefaultImports": true,
+
+    // Enable strict type checking options
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+
+    // Enforce consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+
+    // Disallow fallthrough cases in switch statements
+    "noFallthroughCasesInSwitch": true,
+
+    // Report unused local variables and parameters
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // Require explicit return values in functions
+    "noImplicitReturns": true,
+
+    // Use bundler-style module resolution (Vite/Webpack friendly)
+    "moduleResolution": "bundler",
+
+    // Allow importing JSON modules
+    "resolveJsonModule": true,
+
+    // Ensure each file can be compiled in isolation (safe for Babel/TSX)
+    "isolatedModules": true,
+
+    // Do not emit compiled JS, only type-check
+    "noEmit": true,
+
+    // Base URL for module resolution
+    "baseUrl": ".",
+
+    "composite": true
+  }
+}

@@ -1,27 +1,4 @@
 {
-  "extends": "../../../tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-      // "@pawhaven/sharedFrontend/*": ["../../../packages/shared-frontend/*"],
-      // "@pawhaven/ui/*": ["../../../packages/ui/*"],
-      // "@pawhaven/i18n": ["../../../packages/i18n"],
-      // "@pawhaven/them/*": ["../../../packages/theme/*"]
-    },
-    "outDir": "build",
-    "types": ["node", "vite/client", "@modyfi/vite-plugin-yaml/modules"]
-  },
-  "include": ["src","../../../packages/theme/*","../../../packages/i18n/*","../../../packages/ui/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts"],
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "../../../packages/i18n" }
-    { "path": "../../../packages/theme" },
-    {
-      "path": "../../../packages/ui"
-    }
-  ]
+  "extends": "@pawhaven/tsconfig/web",
+  "include": ["src"]
 }

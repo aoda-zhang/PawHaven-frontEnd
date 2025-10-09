@@ -1,6 +1,6 @@
 {
   "private": "true",
-  "name": "@aoda-zhang/honey-service",
+  "name": "@pawhaven/honey-service",
   "main": "build/main.js",
   "version": "1.0.0",
   "engines": {

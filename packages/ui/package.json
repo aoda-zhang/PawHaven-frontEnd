@@ -24,7 +24,9 @@
     "react-hot-toast": "^2.6.0",
     "react-loading-skeleton": "^3.5.0",
     "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "@pawhaven/tsconfig": "workspace:*",
+    "@pawhaven/eslint-config": "workspace:*"
   },
   "packageManager": "pnpm@10.17.0"
 }

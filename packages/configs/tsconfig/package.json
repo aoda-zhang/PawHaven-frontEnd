@@ -1,0 +1,13 @@
+{
+  "name": "@pawhaven/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.json",
+    "./web": "./web.json",
+    "./node": "./node.json"
+  }
+}

@@ -15,11 +15,9 @@
     "dev:user": "pnpm --filter ./apps/user dev"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "eslint --fix --cache"
-    ],
-    "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
-      "prettier --write --ignore-unknown"
+    "{apps,packages}/**/*.{ts,tsx,js,jsx}": [
+      "pnpm --filter $PWD exec eslint --fix",
+      "pnpm --filter $PWD exec prettier --write"
     ]
   },
   "devDependencies": {

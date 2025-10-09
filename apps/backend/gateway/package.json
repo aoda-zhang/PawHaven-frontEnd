@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "private": true,
-  "name": "@aoda-zhang/gateway",
+  "name": "@pawhaven/gateway",
   "main": "build/main.js",
   "version": "1.0.0",
   "engines": {
