@@ -7,11 +7,11 @@ const baseEslintConfig = require('base');
 module.exports = {
   ...baseEslintConfig,
 
-  // Define Node-specific environment and globals
+  // Define the environments that the code is designed to run in.
+  // This enables global variables predefined by these environments.
   env: {
-    ...baseEslintConfig.env,
-    node: true, // Enable Node.js global variables and scoping
-    browser: false, // Explicitly disable browser globals for backend
+    node: true, // Enables Node.js global variables and Node.js scoping
+    es2022: true, // Enables all ECMAScript 2022 globals and syntax
   },
 
   // Merge base extensions with Node-relevant plugin configurations

@@ -14,6 +14,12 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
+  // Define the environments that the code is designed to run in.
+  // This enables global variables predefined by these environments.
+  env: {
+    browser: true, // Enables browser global variables like window and document
+    es2022: true, // Enables all ECMAScript 2022 globals and syntax
+  },
 
   // Merge base plugins with additional frontend-specific plugins
   plugins: [...baseEslintConfig.plugins, '@tanstack/query'],

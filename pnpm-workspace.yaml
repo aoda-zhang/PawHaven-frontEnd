@@ -10,5 +10,4 @@ onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - bcrypt
   - esbuild
-  - puppeteer
   - unrs-resolver
