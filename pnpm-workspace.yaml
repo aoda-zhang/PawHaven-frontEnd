@@ -1,8 +1,7 @@
+# One * matches a single directory level, while ** matches any nested directory levels.
 packages:
   - apps/**
   - packages/**
-
-  # 2颗星代表匹配任意层级的子目录
 
 onlyBuiltDependencies:
   - '@mui/x-telemetry'
