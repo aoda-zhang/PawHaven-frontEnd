@@ -1,9 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import toast from 'react-hot-toast';
 
 import { HttpBusinessMappingCode } from './types';
-
-// import { AuthAPI } from '@/apis';
-import envConfig from '@/config';
 
 // const jwtExpiredHandle = async () => {
 //   try {
@@ -48,14 +46,10 @@ const httpErrorHandler = async (error: {
       // jwtExpiredHandle();
       break;
     case 500:
-      toast.error(`${envConfig?.systemSettings?.commonErrorMessage}`);
+      toast.error(error?.message);
       break;
     default:
-      toast.error(
-        error?.message
-          ? error?.message
-          : `${envConfig?.systemSettings?.commonErrorMessage}`,
-      );
+      toast.error(error?.message);
   }
 };
 

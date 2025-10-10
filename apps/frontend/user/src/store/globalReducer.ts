@@ -9,11 +9,12 @@ import type { ReduxState } from './reduxStore';
 
 import storageKeys from '@/constants/StorageKeys';
 import type { UserInfoType } from '@/features/Auth/types';
+import type { MenuItemType } from '@/types/LayoutType';
 
 export interface GlobalStateType {
   userInfo: UserInfoType;
-  globalMenuItems: unknown[];
-  globalRouters: unknown[];
+  globalMenuItems: MenuItemType[];
+  globalRouters: [];
   locale: string;
 }
 const initialState: GlobalStateType = {

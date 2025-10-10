@@ -1,5 +1,6 @@
-import SuspenseWrapper from '@sharedComponents/SuspenseWrapper';
-import { lazy, ReactElement } from 'react';
+import { SuspenseWrapper } from '@pawhaven/ui';
+import type { ReactElement } from 'react';
+import { lazy } from 'react';
 
 import ErrorFallback from '@/components/ErrorFallback';
 import GuardRoute from '@/components/GuardRoute';
@@ -8,8 +9,8 @@ import AuthLayout from '@/features/Auth/authLayout';
 import Login from '@/features/Auth/Login';
 import Register from '@/features/Auth/Register';
 import Home from '@/features/Home';
-import RootLayout from '@/layout';
 import RescueGuide from '@/features/RescueGuide';
+import RootLayout from '@/layout';
 
 const ReportStray = lazy(() => import('@/features/ReportStray'));
 const ReportDetail = lazy(() => import('@/features/RescueDetail'));

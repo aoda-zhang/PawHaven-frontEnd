@@ -1,19 +1,18 @@
-import Loading from '@sharedComponents/Loading';
-import { ReactNode } from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  RouteObject,
-} from 'react-router-dom';
+import { Loading } from '@pawhaven/ui';
+import type { ReactNode } from 'react';
+import type { RouteObject } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import routerElementMapping from '@/route/routerElementMapping';
-import { GlobalStateType, useGlobalState } from '@/store/globalReducer';
+import type { GlobalStateType } from '@/store/globalReducer';
+import { useGlobalState } from '@/store/globalReducer';
 
 export interface RouteMetaType {
   isRequireUserLogin?: boolean;
   children?: ReactNode;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const routesMapping = (routesFromAPI: any[]): RouteObject[] => {
   return routesFromAPI.map((route) => {
     const mappedRoute: RouteObject = {

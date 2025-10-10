@@ -88,7 +88,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
       const itemClassNames = item?.classNames ?? [];
       const Component =
         HeaderComponentMappings[
-          item.component as keyof typeof HeaderComponentMappings
+          item.component as unknown as keyof typeof HeaderComponentMappings
         ];
       return (
         <div

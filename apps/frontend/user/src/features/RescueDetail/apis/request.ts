@@ -1,6 +1,5 @@
-import http from '@pawhaven/shared-frontend/cores/http';
-
 import type { AnimalDetail, AnimalRescueStatus } from '@/types/AnimalType';
+import apiClient from '@/utils/apiClient';
 
 export const getAnimalDetail = (id: string) => {
   // return http.get(`/animal/${id}`);
@@ -88,5 +87,5 @@ export const getAnimalDetail = (id: string) => {
 };
 
 export const updateRescueStatus = (id: string, status: AnimalRescueStatus) => {
-  return http.put(`/animal/${id}/status`, { status });
+  return apiClient.put(`/animal/${id}/status`, { status });
 };

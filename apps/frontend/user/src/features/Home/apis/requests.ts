@@ -1,6 +1,6 @@
-import http from '@pawhaven/shared-frontend/cores/http';
-
 import type { RescueItemType } from '../types';
+
+import apiClient from '@/utils/apiClient';
 
 export const getLatestRescuesByNumber = (): Promise<RescueItemType[]> => {
   // return http.get(`/rescues/latest/${number}`);
@@ -40,5 +40,5 @@ export const getLatestRescuesByNumber = (): Promise<RescueItemType[]> => {
 };
 
 export const getLatestStories = (): Promise<RescueItemType[]> => {
-  return http.get('/rescues/latest');
+  return apiClient.get('/rescues/latest');
 };

@@ -22,7 +22,12 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "typescript": "^5.9.2",
+    "react-hot-toast": "^2.6.0",
+    "@tanstack/react-query": "^5.90.1",
     "@pawhaven/tsconfig": "workspace:*",
     "@pawhaven/eslint-config": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2"
   }
 }
