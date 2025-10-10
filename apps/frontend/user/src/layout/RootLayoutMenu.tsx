@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 import RootLayoutMenuRender from './RootLayoutMenuRender';
 import RootLayoutSidebar from './RootLayoutSidebar';
-import type { RootLayoutHeaderProps, RouterInfoType } from './types';
 
 import Brand from '@/components/Brand';
+import type { RootLayoutHeaderProps, RouterInfoType } from '@/types/LayoutType';
 
 const RootLayoutMenu = ({
   menuItems,

@@ -1,9 +1,13 @@
-import LangSwitcher from '@/components/LangSwitcher';
 import clsx from 'clsx';
 import { cloneElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { MenuItemType, MenuRenderType, MenuType } from './types';
+import LangSwitcher from '@/components/LangSwitcher';
+import {
+  MenuType,
+  type MenuItemType,
+  type MenuRenderType,
+} from '@/types/LayoutType';
 
 const HeaderActionKeys = {
   openSidebarMenu: 'openSidebarMenu',
@@ -28,6 +32,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
     return `props_${theme}`;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleHeaderAction = (action: string, actionProps: any) => {
     switch (action) {
       case HeaderActionKeys.toggleDark:

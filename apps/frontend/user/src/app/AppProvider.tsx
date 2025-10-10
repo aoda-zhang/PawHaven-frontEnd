@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material';
 import '@pawhaven/theme/globalTailwind.css';
-import getReactQueryOptions from '@pawhaven/shared-frontend/';
+import getReactQueryOptions from '@pawhaven/shared-frontend/cores/react-query';
 import MUITheme from '@pawhaven/theme/MUI-theme';
 import { Loading } from '@pawhaven/ui';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

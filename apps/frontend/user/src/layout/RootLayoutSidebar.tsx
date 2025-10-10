@@ -1,8 +1,9 @@
 import { Drawer } from '@mui/material';
-import { NavigateFunction } from 'react-router-dom';
+import type { NavigateFunction } from 'react-router-dom';
 
 import RootLayoutMenuRender from './RootLayoutMenuRender';
-import { MenuItemType } from './types';
+
+import type { MenuItemType } from '@/types/LayoutType';
 
 interface RootLayoutSidebarProps {
   menuItems: MenuItemType[];

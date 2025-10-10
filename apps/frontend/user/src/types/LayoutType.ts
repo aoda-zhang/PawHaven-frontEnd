@@ -1,4 +1,5 @@
-import { NavigateFunction, UIMatch } from 'react-router-dom';
+import type { ReactElement } from 'react';
+import type { NavigateFunction, UIMatch } from 'react-router-dom';
 
 export enum MenuType {
   link = 'link',
@@ -11,9 +12,9 @@ export interface MenuItemType {
   classNames?: string[];
   isAvailableOnMobile?: boolean;
   isOnlyMobile?: boolean;
-  component?: any;
-  action?: string; // Explicitly type the action property
-  props?: Record<string, any>;
+  component?: ReactElement;
+  action?: string;
+  props?: Record<string, unknown>;
   type: MenuType;
 }
 
@@ -24,18 +25,18 @@ export interface MenuRenderType {
 }
 
 export interface RouterInfoType {
-  data: Record<string, any> | undefined;
+  data: Record<string, unknown> | undefined;
   handle: {
     isMenuAvailable: boolean;
     requireUserLogin: boolean;
   };
   id: string;
-  params: Record<string, any> | undefined;
+  params: Record<string, unknown> | undefined;
   pathname: string;
 }
 
 export interface RootLayoutHeaderProps {
   menuItems: MenuItemType[];
   navigate: NavigateFunction;
-  routerMatches?: UIMatch<unknown, unknown>[];
+  routerMatches?: Array<UIMatch<unknown, unknown>>;
 }

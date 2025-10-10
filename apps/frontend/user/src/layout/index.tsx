@@ -1,21 +1,17 @@
-import {
-  NavigateFunction,
-  Outlet,
-  UIMatch,
-  useMatches,
-  useNavigate,
-} from 'react-router-dom';
+import type { NavigateFunction, UIMatch } from 'react-router-dom';
+import { Outlet, useMatches, useNavigate } from 'react-router-dom';
 
 import RootLayoutFooter from './RootLayoutFooter';
 import RootLayoutMenu from './RootLayoutMenu';
-import { MenuItemType } from './types';
 
-import { GlobalStateType, useGlobalState } from '@/store/globalReducer';
+import type { GlobalStateType } from '@/store/globalReducer';
+import { useGlobalState } from '@/store/globalReducer';
+import type { MenuItemType } from '@/types/LayoutType';
 
 export interface LayoutProps {
   menuItems: MenuItemType[];
   navigate: NavigateFunction;
-  routerMatches: UIMatch<unknown, unknown>[];
+  routerMatches: Array<UIMatch<unknown, unknown>>;
 }
 
 const RootLayout = () => {
