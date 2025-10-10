@@ -1,4 +1,4 @@
-import Loading from '@sharedComponents/Loading';
+import { Loading } from '@pawhaven/ui';
 import { useEffect } from 'react';
 
 import {

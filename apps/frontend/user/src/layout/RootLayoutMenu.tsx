@@ -1,10 +1,10 @@
-import useIsMobile from '@sharedFrontend/hooks/useIsMobile';
+import useIsMobile from '@pawhaven/shared-frontend/hooks/useIsMobile';
 import { AlignJustify } from 'lucide-react';
 import { useState } from 'react';
 
 import RootLayoutMenuRender from './RootLayoutMenuRender';
 import RootLayoutSidebar from './RootLayoutSidebar';
-import { RootLayoutHeaderProps, RouterInfoType } from './types';
+import type { RootLayoutHeaderProps, RouterInfoType } from './types';
 
 import Brand from '@/components/Brand';
 

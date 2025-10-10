@@ -27,6 +27,5 @@
     "typescript": "^5.9.2",
     "@pawhaven/tsconfig": "workspace:*",
     "@pawhaven/eslint-config": "workspace:*"
-  },
-  "packageManager": "pnpm@10.17.0"
+  }
 }

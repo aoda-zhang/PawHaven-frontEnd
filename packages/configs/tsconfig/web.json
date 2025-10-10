@@ -1,14 +1,10 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "react-jsx", // Enable React 17+ JSX transform
-    "types": ["vite/client"], // Include Vite-specific types for HMR and environment variables
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
     "moduleResolution": "bundler",
-    "paths": {
-      "@pawhaven/ui*": ["@pawhaven/ui*"],
-      "@pawhaven/i18n": ["@pawhaven/i18n"],
-      "@pawhaven/theme/*": ["@pawhaven/theme/*"]
-    }
+    "outDir": "build"
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "build"]
 }

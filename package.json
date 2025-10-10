@@ -9,15 +9,12 @@
   },
   "scripts": {
     "prepare": "husky",
-    "lint-staged": "lint-staged",
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\"",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
-    "dev:user": "pnpm --filter ./apps/user dev"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "{apps,packages}/**/*.{ts,tsx,js,jsx}": [
-      "pnpm --filter $PWD exec eslint --fix",
-      "pnpm --filter $PWD exec prettier --write"
+    "{apps,packages/shared-frontend,packages/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "devDependencies": {
@@ -41,5 +38,5 @@
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.17.0"
+  "packageManager": "pnpm@10.18.2"
 }

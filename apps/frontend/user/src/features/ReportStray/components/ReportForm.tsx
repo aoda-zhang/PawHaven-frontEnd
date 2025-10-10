@@ -5,14 +5,13 @@ import {
   FormSelect,
   FormTextArea,
   FormCheckbox,
-  // FileUpload,
-} from '@sharedComponents/Form';
+} from '@pawhaven/ui';
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { ageOptions, animalTypeOptions, statusOptions } from '../constants';
-import { AnimalReport } from '../types';
+import type { AnimalReport } from '../types';
 
 interface FormSectionProps {
   title: string;

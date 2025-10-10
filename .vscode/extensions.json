@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", // ESLint integration
+    "esbenp.prettier-vscode", // Prettier formatter
+    "bradlc.vscode-tailwindcss", // Tailwind CSS IntelliSense
+    "christian-kohler.path-intellisense", // Local file path completion
+    "ionutvmi.path-autocomplete", // Alias path completion
+    "yoavbls.pretty-ts-errors", // Better TypeScript errors
+    "ecmel.vscode-html-css", // HTML + CSS IntelliSense
+    "formulahendry.auto-rename-tag", // Auto rename paired HTML/JSX tags
+    "abusaidm.html-snippets", // HTML snippets and tag suggestions
+    "dsznajder.es7-react-js-snippets", // React/Redux/TS snippets
+    "burkeholland.simple-react-snippets", // Clean React hooks/component snippets
+    "xabikos.react-native-snippets" // Optional: more JSX/React patterns
+  ]
+}

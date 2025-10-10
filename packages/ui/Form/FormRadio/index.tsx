@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { FC } from 'react';
+import type { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import type { BaseFormType } from '../formBase.type';

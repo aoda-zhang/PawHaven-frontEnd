@@ -48,12 +48,9 @@
     // Ensure each file can be compiled in isolation (safe for Babel/TSX)
     "isolatedModules": true,
 
-    // Do not emit compiled JS, only type-check
-    "noEmit": true,
-
-    // Base URL for module resolution
-    "baseUrl": ".",
-
-    "composite": true
+    // Enable project references for faster builds in monorepos
+    "composite": true,
+    // Generate declaration files for TypeScript files
+    "declaration": true
   }
 }

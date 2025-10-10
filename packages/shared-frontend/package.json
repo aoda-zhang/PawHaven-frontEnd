@@ -1,5 +1,5 @@
 {
-  "name": "shared-frontend",
+  "name": "@pawhaven/shared-frontend",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -21,7 +21,8 @@
     "or": "^0.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "typescript": "^5.9.2"
-  },
-  "packageManager": "pnpm@10.17.0"
+    "typescript": "^5.9.2",
+    "@pawhaven/tsconfig": "workspace:*",
+    "@pawhaven/eslint-config": "workspace:*"
+  }
 }

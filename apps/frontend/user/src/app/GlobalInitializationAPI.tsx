@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { RouteObject } from 'react-router-dom';
+import type { RouteObject } from 'react-router-dom';
 
 // Fetch menu from server side
 const getDefaultDynamicMenu = () => {

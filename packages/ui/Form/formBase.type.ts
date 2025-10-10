@@ -9,7 +9,7 @@ export interface BaseFormType {
 }
 
 export interface BaseSelectType {
-  options: { label: string; value: string | number }[];
+  options: Array<{ label: string; value: string | number }>;
 }
 
 export interface BaseTextFieldType {

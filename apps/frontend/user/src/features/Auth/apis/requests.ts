@@ -1,6 +1,6 @@
-import httpService from '@sharedFrontend/cores/http';
+import httpService from '@pawhaven/shared-frontend/cores/http';
 
-import { AuthFieldType, LoginInfo } from '../types';
+import type { AuthFieldType, LoginInfo } from '../types';
 
 export const register = (userInfo: AuthFieldType): Promise<LoginInfo> => {
   return httpService.post('/auth/register', userInfo);

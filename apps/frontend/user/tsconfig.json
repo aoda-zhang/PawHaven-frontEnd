@@ -1,4 +1,12 @@
 {
   "extends": "@pawhaven/tsconfig/web",
-  "include": ["src"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node", "vite/client", "@modyfi/vite-plugin-yaml/modules"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@pawhaven/shared-frontend": ["../../../packages/shared-frontend/*"],
+      "@pawhaven/ui": ["../../../packages/ui/*"]
+    }
+  }
 }

@@ -1,4 +1,3 @@
 {
-  "extends": "@pawhaven/tsconfig/web",
-  "include": ["src"]
+  "extends": "@pawhaven/tsconfig/web"
 }

@@ -1,32 +1,3 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "declaration": false,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ESNext",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "types": [],
-    "incremental": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "baseUrl": "",
-    "paths": {
-      "@utils/*": ["./utils/*"],
-      "@core/*": ["./core/*"],
-      "@dtos/*": ["./DTO//*"]
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "coverage",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "extends": "@pawhaven/tsconfig/node"
 }

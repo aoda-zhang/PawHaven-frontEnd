@@ -1,4 +1,4 @@
-import storageTool from '@sharedFrontend/utils/storage';
+import storageTool from '@pawhaven/shared-frontend/utils/storage';
 import type { ReactElement } from 'react';
 import { useEffect, useState } from 'react';
 import { useMatches, useNavigate } from 'react-router-dom';

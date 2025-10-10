@@ -1,15 +1,17 @@
 {
+  // --- 🧹 Basic formatting & save rules ---
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit"
   },
+
+  // --- 🧠 TypeScript settings ---
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
-  "less.lint.unknownAtRules": "ignore",
+
+  // --- 💄 ESLint + Prettier integration ---
   "eslint.validate": [
     "javascript",
     "typescript",
@@ -17,11 +19,13 @@
     "typescriptreact"
   ],
   "prettier.requireConfig": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  // --- 🎨 Tailwind CSS support ---
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
@@ -29,17 +33,23 @@
     ["className\\s*=\\s*{`([^`]*)", 1],
     ["class\\s*=\\s*\"([^\"]*)", 1]
   ],
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "tailwindCSS.experimental.configFile": "packages/theme/global.css",
+  "tailwindCSS.experimental.configFile": "packages/theme/globalTailwind.css",
   "tailwindCSS.includeLanguages": {
     "javascript": "javascript",
     "javascriptreact": "javascript",
     "typescript": "typescript",
     "typescriptreact": "typescript"
   },
+
+  // --- 💬 Quick suggestions ---
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+
+  // --- 🧭 Path Autocomplete: alias path completions ---
+  "path-autocomplete.pathMappings": {
+    "@pawhaven/ui/*": "${workspaceFolder}/packages/ui/*",
+    "@pawhaven/shared-frontend": "${workspaceFolder}/packages/shared-frontend/*"
+  },
+  "path-autocomplete.extensionOnImport": true
 }

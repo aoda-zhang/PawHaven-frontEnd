@@ -5,7 +5,7 @@ import {
   type CheckboxProps,
 } from '@mui/material';
 import clsx from 'clsx';
-import { FC } from 'react';
+import type { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import type { BaseFormType } from '../formBase.type';

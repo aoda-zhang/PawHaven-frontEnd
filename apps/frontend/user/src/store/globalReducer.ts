@@ -1,19 +1,19 @@
+import LocaleKeys from '@pawhaven/shared-frontend/constants/localeKey';
+import storageTool from '@pawhaven/shared-frontend/utils/storage';
 import { createSlice } from '@reduxjs/toolkit';
-import LocaleKeys from '@sharedFrontend/constants/localeKey';
-import storageTool from '@sharedFrontend/utils/storage';
 
 import { useReduxSelector } from '../hooks/reduxHooks';
 
 import reducerNames from './reducerNames';
-import { ReduxState } from './reduxStore';
+import type { ReduxState } from './reduxStore';
 
 import storageKeys from '@/constants/StorageKeys';
 import type { UserInfoType } from '@/features/Auth/types';
 
 export interface GlobalStateType {
   userInfo: UserInfoType;
-  globalMenuItems: any[];
-  globalRouters: any[];
+  globalMenuItems: unknown[];
+  globalRouters: unknown[];
   locale: string;
 }
 const initialState: GlobalStateType = {

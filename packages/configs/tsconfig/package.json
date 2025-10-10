@@ -9,5 +9,8 @@
     "./base": "./base.json",
     "./web": "./web.json",
     "./node": "./node.json"
+  },
+  "dependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.1.1"
   }
 }

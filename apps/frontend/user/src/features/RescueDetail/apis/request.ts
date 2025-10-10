@@ -1,6 +1,6 @@
-import http from '@sharedFrontend/cores/http';
+import http from '@pawhaven/shared-frontend/cores/http';
 
-import { AnimalDetail, AnimalRescueStatus } from '@/types/AnimalType';
+import type { AnimalDetail, AnimalRescueStatus } from '@/types/AnimalType';
 
 export const getAnimalDetail = (id: string) => {
   // return http.get(`/animal/${id}`);

@@ -1,8 +1,8 @@
-import storage from '@sharedFrontend/utils/storage';
+import storage from '@pawhaven/shared-frontend/utils/storage';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 
-import { AuthFieldType, LoginInfo } from '../types';
+import type { AuthFieldType, LoginInfo } from '../types';
 
 import * as AuthAPI from './requests';
 

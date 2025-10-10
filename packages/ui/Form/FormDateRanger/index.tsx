@@ -1,15 +1,13 @@
 import { FormControl, FormHelperText } from '@mui/material';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import {
-  SingleInputDateRangeField,
-  SingleInputDateRangeFieldProps,
-} from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
+import type { SingleInputDateRangeFieldProps } from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
+import { SingleInputDateRangeField } from '@mui/x-date-pickers-pro/SingleInputDateRangeField';
 import clsx from 'clsx';
-import { FC } from 'react';
+import type { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import { BaseFormType } from '../formBase.type';
+import type { BaseFormType } from '../formBase.type';
 
 type FormSingleDateRangerProps = BaseFormType &
   Omit<SingleInputDateRangeFieldProps, 'value' | 'onChange'> & {
