@@ -1,2 +1,10 @@
 #!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Step 1️⃣: Run ESLint + Prettier via lint-staged
+echo "🧹 Running ESLint + Prettier..."
 pnpm exec lint-staged
+
+# Step 2️⃣: Run version bump script
+echo "🔍 Checking package versions..."
+bash scripts/bump-version.sh
