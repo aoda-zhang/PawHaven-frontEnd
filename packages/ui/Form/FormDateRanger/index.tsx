@@ -14,7 +14,7 @@ type FormSingleDateRangerProps = BaseFormType &
     fullWidth?: boolean;
   };
 
-const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
+const FormDateRanger: FC<FormSingleDateRangerProps> = ({
   name,
   label,
   defaultValue = [null, null],
@@ -53,4 +53,4 @@ const FormSingleDateRanger: FC<FormSingleDateRangerProps> = ({
   );
 };
 
-export default FormSingleDateRanger;
+export default FormDateRanger;
