@@ -9,12 +9,17 @@ module.exports = {
       'always',
       ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore'],
     ],
-    // Scope is optional but if present, must be lowercase
-    'scope-case': [2, 'always', 'lower-case'],
-    // Subject must be lowercase
-    'subject-case': [2, 'always', 'lower-case'],
-    // Subject must be at least 10 characters long
-    'subject-min-length': [2, 'always', 10],
+
+    // Scope is optional and can be any case (uppercase, lowercase, or Chinese)
+    'scope-case': [0],
+
+    // Subject can include uppercase, lowercase, or Chinese
+    // Setting to 0 disables the lowercase enforcement
+    'subject-case': [0],
+
+    // Subject must be at least 5 characters long (since Chinese takes fewer characters)
+    'subject-min-length': [2, 'always', 5],
+
     // Enforce maximum header length of 100 characters
     'header-max-length': [2, 'always', 100],
   },
