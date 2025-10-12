@@ -734,10 +734,10 @@ importers:
         version: link:../../../packages/configs/eslint-config
       '@pawhaven/i18n':
         specifier: workspace:*
-        version: link:../../../packages/i18n
+        version: link:../../../libs/i18n
       '@pawhaven/shared-frontend':
         specifier: workspace:*
-        version: link:../../../packages/shared-frontend
+        version: link:../../../libs/shared-frontend
       '@pawhaven/theme':
         specifier: workspace:*
         version: link:../../../packages/theme
@@ -860,58 +860,7 @@ importers:
         specifier: 6.0.0-beta.4
         version: 6.0.0-beta.4(typescript@5.9.3)(vite@7.1.9(@types/node@24.7.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))
 
-  packages/configs/eslint-config:
-    dependencies:
-      '@tanstack/eslint-plugin-query':
-        specifier: ^5.74.7
-        version: 5.91.0(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.32.1
-        version: 8.46.0(@typescript-eslint/parser@8.46.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.32.1
-        version: 8.46.0(eslint@8.57.1)(typescript@5.9.3)
-      eslint:
-        specifier: ^8.5.7
-        version: 8.57.1
-      eslint-config-airbnb:
-        specifier: ^19.0.4
-        version: 19.0.4(eslint-plugin-import@2.32.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@8.57.1))(eslint-plugin-react-hooks@7.0.0(eslint@8.57.1))(eslint-plugin-react@7.37.5(eslint@8.57.1))(eslint@8.57.1)
-      eslint-config-prettier:
-        specifier: ^10.1.8
-        version: 10.1.8(eslint@8.57.1)
-      eslint-import-resolver-typescript:
-        specifier: ^4.4.4
-        version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@8.57.1)
-      eslint-plugin-import:
-        specifier: ^2.32.0
-        version: 2.32.0(@typescript-eslint/parser@8.46.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@4.4.4)(eslint@8.57.1)
-      eslint-plugin-jsx-a11y:
-        specifier: ^6.10.2
-        version: 6.10.2(eslint@8.57.1)
-      eslint-plugin-prettier:
-        specifier: ^5.5.4
-        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@8.57.1))(eslint@8.57.1)(prettier@3.6.2)
-      eslint-plugin-react:
-        specifier: ^7.37.5
-        version: 7.37.5(eslint@8.57.1)
-      eslint-plugin-react-hooks:
-        specifier: ^7.0.0
-        version: 7.0.0(eslint@8.57.1)
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.20
-        version: 0.4.23(eslint@8.57.1)
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
-
-  packages/configs/tsconfig:
-    dependencies:
-      '@modyfi/vite-plugin-yaml':
-        specifier: ^1.1.1
-        version: 1.1.1(rollup@4.52.4)(vite@7.1.9(@types/node@24.7.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))
-
-  packages/i18n:
+  libs/i18n:
     dependencies:
       '@pawhaven/shared-frontend':
         specifier: workspace:*
@@ -923,7 +872,7 @@ importers:
         specifier: ^16.0.0
         version: 16.0.0(i18next@25.6.0(typescript@5.9.3))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
 
-  packages/shared-backend:
+  libs/shared-backend:
     dependencies:
       '@nestjs/axios':
         specifier: ^4.0.1
@@ -1048,10 +997,10 @@ importers:
         version: 11.1.6(@nestjs/common@11.1.6(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.6)(@nestjs/microservices@11.1.6)(@nestjs/platform-express@11.1.6)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../configs/eslint-config
+        version: link:../../packages/configs/eslint-config
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../configs/tsconfig
+        version: link:../../packages/configs/tsconfig
       '@types/crypto-js':
         specifier: ^4.2.2
         version: 4.2.2
@@ -1089,7 +1038,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/shared-frontend:
+  libs/shared-frontend:
     dependencies:
       '@emotion/react':
         specifier: ^11.14.0
@@ -1099,10 +1048,10 @@ importers:
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../configs/eslint-config
+        version: link:../../packages/configs/eslint-config
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../configs/tsconfig
+        version: link:../../packages/configs/tsconfig
       '@tanstack/react-query':
         specifier: ^5.90.2
         version: 5.90.2(react@19.2.0)
@@ -1152,6 +1101,57 @@ importers:
       '@types/crypto-js':
         specifier: ^4.2.2
         version: 4.2.2
+
+  packages/configs/eslint-config:
+    dependencies:
+      '@tanstack/eslint-plugin-query':
+        specifier: ^5.74.7
+        version: 5.91.0(eslint@8.57.1)(typescript@5.9.3)
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.32.1
+        version: 8.46.0(@typescript-eslint/parser@8.46.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.32.1
+        version: 8.46.0(eslint@8.57.1)(typescript@5.9.3)
+      eslint:
+        specifier: ^8.5.7
+        version: 8.57.1
+      eslint-config-airbnb:
+        specifier: ^19.0.4
+        version: 19.0.4(eslint-plugin-import@2.32.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@8.57.1))(eslint-plugin-react-hooks@7.0.0(eslint@8.57.1))(eslint-plugin-react@7.37.5(eslint@8.57.1))(eslint@8.57.1)
+      eslint-config-prettier:
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@8.57.1)
+      eslint-import-resolver-typescript:
+        specifier: ^4.4.4
+        version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@8.57.1)
+      eslint-plugin-import:
+        specifier: ^2.32.0
+        version: 2.32.0(@typescript-eslint/parser@8.46.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@4.4.4)(eslint@8.57.1)
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.10.2
+        version: 6.10.2(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.5.4
+        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@8.57.1))(eslint@8.57.1)(prettier@3.6.2)
+      eslint-plugin-react:
+        specifier: ^7.37.5
+        version: 7.37.5(eslint@8.57.1)
+      eslint-plugin-react-hooks:
+        specifier: ^7.0.0
+        version: 7.0.0(eslint@8.57.1)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.20
+        version: 0.4.23(eslint@8.57.1)
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+
+  packages/configs/tsconfig:
+    dependencies:
+      '@modyfi/vite-plugin-yaml':
+        specifier: ^1.1.1
+        version: 1.1.1(rollup@4.52.4)(vite@7.1.9(@types/node@24.7.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))
 
   packages/theme:
     dependencies:

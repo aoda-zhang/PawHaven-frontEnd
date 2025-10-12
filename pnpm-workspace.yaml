@@ -2,6 +2,7 @@
 packages:
   - apps/**
   - packages/**
+  - libs/**
 
 onlyBuiltDependencies:
   - '@mui/x-telemetry'
