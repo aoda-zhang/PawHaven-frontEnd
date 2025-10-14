@@ -6,4 +6,4 @@ export { default as FormTextArea } from './Form/FormTextArea';
 export { default as FormRadio } from './Form/FormRadio';
 export { default as FormSelect } from './Form/FormSelect';
 export { default as SuspenseWrapper } from './SuspenseWrapper';
-export { default as  } from './Phase';
+export { default as Phase } from './Phase';
