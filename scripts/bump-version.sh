@@ -1,6 +1,6 @@
 #!/bin/sh
 # Detect if there are any changes under packages/
-changed=$(git diff --name-only HEAD -- 'packages/*')
+changed=$( (git diff --name-only HEAD -- 'packages/*'; git diff --cached --name-only -- 'packages/*') | sort -u )
 
 if [ -n "$changed" ]; then
   echo "🚨 Detected changes in packages:"
