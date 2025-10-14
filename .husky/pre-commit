@@ -1,10 +1,12 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# Detect if there are any changes under packages/
+changed=$( (git diff --name-only HEAD -- 'packages/*'; git diff --cached --name-only -- 'packages/*') | sort -u )
 
-# Step 1️⃣: Run ESLint + Prettier via lint-staged
-echo "🧹 Running ESLint + Prettier..."
-pnpm exec lint-staged
-
-# Step 2️⃣: Run version bump script
-echo "🔍 Checking module versions under packages..."
-bash scripts/bump-version.sh
+if [ -n "$changed" ]; then
+  echo "🚨 Detected changes in packages:"
+  echo "$changed"
+  echo "📝 Creating a new changeset..."
+  pnpm changeset
+else
+  echo "✅ No changes in packages, skipping changeset."
+fi
