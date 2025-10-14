@@ -9,7 +9,9 @@
   },
   "scripts": {
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "bump-version": "./scripts/bump-version.sh",
+    "bump": "pnpm changeset version && pnpm install"
   },
   "lint-staged": {
     "{apps,packages/shared-frontend,packages/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
