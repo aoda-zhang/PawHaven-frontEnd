@@ -68,12 +68,6 @@ const MultiFileUploader: React.FC<MultiFileUploaderProps> = ({
         </Button>
       </Box>
 
-      {error && (
-        <Typography color="error" mt={2}>
-          {error}
-        </Typography>
-      )}
-
       {files.length > 0 && (
         <Box mt={2}>
           <Typography variant="subtitle2">Selected files:</Typography>
