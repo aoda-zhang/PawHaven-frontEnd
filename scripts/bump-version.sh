@@ -1,12 +1,12 @@
 #!/bin/sh
-# Check if has packages module changed
-changed=$(git diff --cached --name-only | grep '^packages/')
+# Detect if there are any changes under packages/
+changed=$(git diff --name-only HEAD -- 'packages/*')
 
 if [ -n "$changed" ]; then
   echo "🚨 Detected changes in packages:"
   echo "$changed"
-  echo "📦 Auto updating versions via changeset..."
-  pnpm changeset version
+  echo "📝 Creating a new changeset..."
+  pnpm changeset
 else
-  echo "✅ No changes in packages, skipping version update."
+  echo "✅ No changes in packages, skipping changeset."
 fi
