@@ -9,18 +9,15 @@
   },
   "scripts": {
     "prepare": "husky",
-    "lint-staged": "lint-staged",
-    "bump-version": "./scripts/bump-version.sh",
-    "bump": "pnpm changeset version && pnpm install"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "{apps,packages/shared-frontend,packages/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
+    "{apps,libs/shared-frontend,libs/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write"
     ]
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@tanstack/eslint-plugin-query": "^5.74.7",
@@ -41,5 +38,5 @@
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.18.2"
+  "packageManager": "pnpm@10.18.3"
 }

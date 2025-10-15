@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Step 1️⃣: Run ESLint + Prettier via lint-staged
+# Run ESLint + Prettier via lint-staged
 echo "🧹 Checking code lints...."
 pnpm exec lint-staged
-
-# Step 2️⃣: Run version bump script
-echo "🔍 Checking module versions under packages..."
-bash scripts/bump-version.sh
