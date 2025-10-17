@@ -1,4 +1,4 @@
-const baseEslintConfig = require('base');
+const baseEslintConfig = require('./base.js');
 
 /**
  * Node.js ESLint configuration for PawHaven backend services.

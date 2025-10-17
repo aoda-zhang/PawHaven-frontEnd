@@ -23,7 +23,7 @@ module.exports = {
 
   // Extend shared configurations
   extends: [
-    'airbnb-base', // Base Airbnb style for JS
+    'airbnb-base',
     'plugin:@typescript-eslint/recommended', // Recommended TypeScript rules
     'plugin:import/errors',
     'plugin:import/warnings',

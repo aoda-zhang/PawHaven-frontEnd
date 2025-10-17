@@ -39,7 +39,7 @@ const GlobalInitializer = () => {
     if (menu && menu?.length > 0) {
       dispatch(setGlobalMenuItems(menu));
     }
-  }, [menu, dispatch]);
+  }, [dispatch, menu]);
 
   useEffect(() => {
     if (routers && routers?.length > 0) {

@@ -1,0 +1,24 @@
+# Ignore build outputs and dependencies
+node_modules/
+dist/
+build/
+coverage/
+.next/
+out/
+
+# Ignore config and generated files
+*.config.js
+*.config.cjs
+*.config.mjs
+*.min.js
+*.d.ts
+
+# Ignore environment and tooling folders
+.husky/
+.vscode/
+.github/
+scripts/
+logs/
+
+# Ignore specific monorepo folders that don't require linting
+libs/configs

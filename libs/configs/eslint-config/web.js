@@ -1,4 +1,4 @@
-const baseEslintConfig = require('./base');
+const baseEslintConfig = require('./base.js');
 
 /**
  * Web ESLint configuration for PawHaven frontend projects.
@@ -10,7 +10,6 @@ module.exports = {
   // Merge "extends" from base with additional React-specific ones
   extends: [
     ...baseEslintConfig.extends,
-    'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
