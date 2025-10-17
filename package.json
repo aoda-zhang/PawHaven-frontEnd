@@ -12,7 +12,7 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "{apps,libs/shared-frontend,libs/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
+    "{apps,packages/shared-frontend,packages/shared-backend,packages/ui}/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write"
     ]

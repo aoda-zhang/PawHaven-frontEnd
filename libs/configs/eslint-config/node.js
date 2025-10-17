@@ -13,7 +13,6 @@ module.exports = {
     node: true, // Enables Node.js global variables and Node.js scoping
     es2022: true, // Enables all ECMAScript 2022 globals and syntax
   },
-
   // Merge base extensions with Node-relevant plugin configurations
   extends: [
     ...baseEslintConfig.extends,

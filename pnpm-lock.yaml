@@ -728,7 +728,7 @@ importers:
         version: 7.3.4(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../../../packages/configs/eslint-config
+        version: link:../../../libs/configs/eslint-config
       '@pawhaven/i18n':
         specifier: workspace:*
         version: link:../../../packages/i18n
@@ -740,7 +740,7 @@ importers:
         version: link:../../../packages/theme
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../../../packages/configs/tsconfig
+        version: link:../../../libs/configs/tsconfig
       '@pawhaven/ui':
         specifier: workspace:*
         version: link:../../../packages/ui
@@ -857,7 +857,7 @@ importers:
         specifier: 6.0.0-beta.4
         version: 6.0.0-beta.4(typescript@5.9.3)(vite@7.1.9(@types/node@24.7.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)(yaml@2.8.1))
 
-  packages/configs/eslint-config:
+  libs/configs/eslint-config:
     dependencies:
       '@tanstack/eslint-plugin-query':
         specifier: ^5.74.7
@@ -902,7 +902,7 @@ importers:
         specifier: ^3.6.2
         version: 3.6.2
 
-  packages/configs/tsconfig:
+  libs/configs/tsconfig:
     dependencies:
       '@modyfi/vite-plugin-yaml':
         specifier: ^1.1.1
@@ -1045,10 +1045,10 @@ importers:
         version: 11.1.6(@nestjs/common@11.1.6(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.6)(@nestjs/microservices@11.1.6)(@nestjs/platform-express@11.1.6)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../configs/eslint-config
+        version: link:../../libs/configs/eslint-config
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../configs/tsconfig
+        version: link:../../libs/configs/tsconfig
       '@types/crypto-js':
         specifier: ^4.2.2
         version: 4.2.2
@@ -1096,10 +1096,10 @@ importers:
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../configs/eslint-config
+        version: link:../../libs/configs/eslint-config
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../configs/tsconfig
+        version: link:../../libs/configs/tsconfig
       '@tanstack/react-query':
         specifier: ^5.90.2
         version: 5.90.2(react@19.2.0)
@@ -1181,10 +1181,10 @@ importers:
         version: 8.14.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@mui/material@7.3.4(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mui/system@7.3.3(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(dayjs@1.11.18)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@pawhaven/eslint-config':
         specifier: workspace:*
-        version: link:../configs/eslint-config
+        version: link:../../libs/configs/eslint-config
       '@pawhaven/tsconfig':
         specifier: workspace:*
-        version: link:../configs/tsconfig
+        version: link:../../libs/configs/tsconfig
       '@types/node':
         specifier: ^24.7.1
         version: 24.7.1
