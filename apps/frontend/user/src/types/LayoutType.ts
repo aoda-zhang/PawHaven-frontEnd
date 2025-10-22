@@ -1,10 +1,12 @@
 import type { ReactElement } from 'react';
 import type { NavigateFunction, UIMatch } from 'react-router-dom';
 
-export enum MenuType {
-  link = 'link',
-  component = 'component',
-}
+const menuTypes = {
+  link: 'link',
+  component: 'component',
+} as const;
+
+export type MenuType = (typeof menuTypes)[keyof typeof menuTypes];
 
 export interface MenuItemType {
   label: string;
