@@ -62,21 +62,23 @@ const getDynamicRouters = () => {
         {
           path: '/rescue/detail/:animalID',
           element: 'rescue_detail',
-          handle: { isRequireUserLogin: false },
         },
-      ],
-    },
-    {
-      element: 'authLayout',
-      children: [
         {
           path: '/auth/login',
-          handle: { isRequireUserLogin: false },
+          handle: {
+            isRequireUserLogin: false,
+            isMenuAvailable: false,
+            isFooterAvailable: false,
+          },
           element: 'auth_login',
         },
         {
           path: '/auth/register',
-          handle: { isRequireUserLogin: false },
+          handle: {
+            isRequireUserLogin: false,
+            isMenuAvailable: false,
+            isFooterAvailable: false,
+          },
           element: 'auth_register',
         },
       ],

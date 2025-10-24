@@ -6,24 +6,18 @@ import RootLayoutMenuRender from './RootLayoutMenuRender';
 import RootLayoutSidebar from './RootLayoutSidebar';
 
 import Brand from '@/components/Brand';
-import type { RootLayoutHeaderProps, RouterInfoType } from '@/types/LayoutType';
+import type { RootLayoutHeaderProps } from '@/types/LayoutType';
 
 const RootLayoutMenu = ({
   menuItems,
   navigate,
-  routerMatches,
+  currentRouterInfo,
 }: RootLayoutHeaderProps) => {
   const isMobile = useIsMobile();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const currentRouter = routerMatches?.[
-    (routerMatches?.length ?? 0) - 1
-  ] as RouterInfoType;
-  const isMenuAvailable = !currentRouter?.handle?.isMenuAvailable;
 
   const onOpenSidebar = () => setSidebarOpen(true);
   const onCloseSidebar = () => setSidebarOpen(false);
-
-  if (!isMenuAvailable) return null;
 
   return (
     <header className="flex items-center gap-4 box-border sticky top-0 p-[.625rem] z-50 border-border border-b-1 px-6 py-4 bg-white">
@@ -31,7 +25,7 @@ const RootLayoutMenu = ({
       {!isMobile && (
         <RootLayoutMenuRender
           menuItems={menuItems}
-          activePath={currentRouter?.pathname || ''}
+          activePath={currentRouterInfo?.pathname || ''}
           navigate={navigate}
         />
       )}

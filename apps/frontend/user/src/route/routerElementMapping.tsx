@@ -3,9 +3,8 @@ import type { ReactElement } from 'react';
 import { lazy } from 'react';
 
 import ErrorFallback from '@/components/ErrorFallback';
-import GuardRoute from '@/components/GuardRoute';
+// import GuardRoute from '@/components/GuardRoute';
 import NotFund from '@/components/NotFund';
-import AuthLayout from '@/features/Auth/authLayout';
 import Login from '@/features/Auth/Login';
 import Register from '@/features/Auth/Register';
 import Home from '@/features/Home';
@@ -18,14 +17,13 @@ const ReportDetail = lazy(() => import('@/features/RescueDetail'));
 // Please use SuspenseWrapper to wrap the lazy loaded components
 
 const routerElementMapping: Record<string, ReactElement> = {
-  guardRoute: (
-    <GuardRoute>
-      <RootLayout />
-    </GuardRoute>
-  ),
+  // guardRoute: (
+  //   <GuardRoute>
+  //     <RootLayout />
+  //   </GuardRoute>
+  // ),
   rootLayout: <RootLayout />,
   home: <Home />,
-  authLayout: <AuthLayout />,
   auth_login: <Login />,
   auth_register: <Register />,
   report_stray: (

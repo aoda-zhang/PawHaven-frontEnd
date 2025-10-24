@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import LangSwitcher from '@/components/LangSwitcher';
 import {
-  MenuType,
+  menuTypes,
   type MenuItemType,
   type MenuRenderType,
 } from '@/types/LayoutType';
@@ -47,7 +47,7 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
   const handleLinkMenu = (item: MenuItemType) => {
     if (item?.to) {
       const isActiveMenuItem =
-        item.type === MenuType.link && activePath === item?.to;
+        item.type === menuTypes.link && activePath === item?.to;
       let itemClassNames = [
         rootLayoutClassNames[
           item?.classNames as unknown as keyof typeof rootLayoutClassNames
@@ -117,9 +117,9 @@ const RootLayoutMenuRender = (props: MenuRenderType) => {
 
   return menuItems?.map((item) => {
     switch (item.type) {
-      case MenuType.link:
+      case menuTypes.link:
         return handleLinkMenu(item);
-      case MenuType.component:
+      case menuTypes.component:
         return handleComponentMenu(item);
       default:
         return null;

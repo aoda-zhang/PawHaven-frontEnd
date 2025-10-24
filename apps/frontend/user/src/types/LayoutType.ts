@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import type { NavigateFunction, UIMatch } from 'react-router-dom';
+import type { NavigateFunction } from 'react-router-dom';
 
-const menuTypes = {
+export const menuTypes = {
   link: 'link',
   component: 'component',
 } as const;
@@ -26,12 +26,15 @@ export interface MenuRenderType {
   navigate: NavigateFunction;
 }
 
+export type RouterHandle = {
+  isMenuAvailable?: boolean;
+  isRequireUserLogin?: boolean;
+  isFooterAvailable?: boolean;
+};
+
 export interface RouterInfoType {
   data: Record<string, unknown> | undefined;
-  handle: {
-    isMenuAvailable: boolean;
-    requireUserLogin: boolean;
-  };
+  handle: RouterHandle;
   id: string;
   params: Record<string, unknown> | undefined;
   pathname: string;
@@ -40,5 +43,5 @@ export interface RouterInfoType {
 export interface RootLayoutHeaderProps {
   menuItems: MenuItemType[];
   navigate: NavigateFunction;
-  routerMatches?: Array<UIMatch<unknown, unknown>>;
+  currentRouterInfo?: RouterInfoType;
 }

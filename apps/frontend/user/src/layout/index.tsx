@@ -1,12 +1,13 @@
+import useRouterInfo from '@pawhaven/shared-frontend/hooks/useRouterInfo';
 import type { NavigateFunction, UIMatch } from 'react-router-dom';
-import { Outlet, useMatches, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 import RootLayoutFooter from './RootLayoutFooter';
 import RootLayoutMenu from './RootLayoutMenu';
 
 import type { GlobalStateType } from '@/store/globalReducer';
 import { useGlobalState } from '@/store/globalReducer';
-import type { MenuItemType } from '@/types/LayoutType';
+import type { MenuItemType, RouterInfoType } from '@/types/LayoutType';
 
 export interface LayoutProps {
   menuItems: MenuItemType[];
@@ -17,19 +18,25 @@ export interface LayoutProps {
 const RootLayout = () => {
   const { globalMenuItems } = useGlobalState() as GlobalStateType;
   const navigate = useNavigate();
-  const routerMatches = useMatches();
+  const currentRouterInfo = useRouterInfo<RouterInfoType>();
+  const { isMenuAvailable = true, isFooterAvailable = true } =
+    currentRouterInfo?.handle ?? {};
+
   return (
     <div className="flex flex-col box-border h-full min-h-dvh">
-      <RootLayoutMenu
-        menuItems={globalMenuItems}
-        navigate={navigate}
-        routerMatches={routerMatches}
-      />
+      {isMenuAvailable && (
+        <RootLayoutMenu
+          menuItems={globalMenuItems}
+          navigate={navigate}
+          currentRouterInfo={currentRouterInfo}
+        />
+      )}
+
       <div className="flex-1 flex flex-col">
         <div className="flex-1">
           <Outlet />
         </div>
-        <RootLayoutFooter />
+        {isFooterAvailable && <RootLayoutFooter />}
       </div>
     </div>
   );

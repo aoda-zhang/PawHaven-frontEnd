@@ -1,5 +1,6 @@
 import { Loading } from '@pawhaven/ui';
 import type { ReactNode } from 'react';
+import { useMemo } from 'react';
 import type { RouteObject } from 'react-router-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -14,27 +15,42 @@ export interface RouteMetaType {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const routesMapping = (routesFromAPI: any[]): RouteObject[] => {
-  return routesFromAPI.map((route) => {
+  const routes = routesFromAPI.map((route) => {
     const mappedRoute: RouteObject = {
       path: route?.path,
       element: routerElementMapping[route.element],
-      errorElement: routerElementMapping.errorFallback,
-      handle: route.handle,
+      handle: route?.handle,
     };
 
     if (route?.children) {
-      mappedRoute.children = routesMapping(route.children);
+      mappedRoute.children = routesMapping(route?.children);
+      mappedRoute.errorElement = routerElementMapping.errorFallback;
     }
 
     return mappedRoute;
   });
+  return routes;
 };
 
 const AppRouterProvider = () => {
   const { globalRouters } = useGlobalState() as GlobalStateType;
-  if (globalRouters?.length > 0) {
-    const routes = createBrowserRouter(routesMapping(globalRouters));
-    return <RouterProvider router={routes} />;
+
+  const mappedRoutes = useMemo(() => {
+    if (globalRouters?.length > 0) {
+      return routesMapping(globalRouters);
+    }
+    return [];
+  }, [globalRouters]);
+
+  const router = useMemo(() => {
+    if (mappedRoutes.length > 0) {
+      return createBrowserRouter(mappedRoutes);
+    }
+    return null;
+  }, [mappedRoutes]);
+
+  if (router) {
+    return <RouterProvider router={router} />;
   }
   return <Loading />;
 };
